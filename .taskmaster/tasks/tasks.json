@@ -1,0 +1,426 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Project Setup and Repository Configuration",
+        "description": "Initialize the Next.js 15.1 project with React 19, Tailwind CSS, and MagicUI components. Set up the repository structure and development environment.",
+        "details": "1. Create a new Next.js 15.1 project with App Router: `npx create-next-app@latest artistlive --typescript --eslint --tailwind --app --src-dir`\n2. Install dependencies: `npm install @magic-ui/react@latest tailwindcss@latest postcss@latest autoprefixer@latest`\n3. Configure Tailwind CSS with the project's color scheme and design tokens\n4. Set up ESLint and Prettier for code quality\n5. Create folder structure:\n   - `/app` - App router pages\n   - `/app/[locale]` - Locale-specific routes\n   - `/components` - Reusable UI components\n   - `/lib` - Utility functions\n   - `/public` - Static assets\n   - `/content` - Blog content (MDX)\n   - `/locales` - i18n translation files\n6. Configure GitHub repository with proper .gitignore\n7. Set up Netlify configuration for deployment",
+        "testStrategy": "1. Verify all dependencies install correctly\n2. Ensure the development server starts without errors\n3. Confirm the project structure follows Next.js 15.1 best practices\n4. Test that Tailwind CSS is properly configured\n5. Validate ESLint and Prettier configurations",
+        "priority": "high",
+        "dependencies": [],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Next.js i18n Configuration",
+        "description": "Implement bilingual support with Next.js built-in i18n routing for Indonesian (id-ID) and English (en-US) languages.",
+        "details": "1. Create locale configuration in Next.js config:\n```javascript\n// next.config.js\nmodule.exports = {\n  i18n: {\n    locales: ['id', 'en'],\n    defaultLocale: 'id',\n    localeDetection: true,\n  }\n}\n```\n2. Create locale folders in `/app/[locale]`\n3. Implement locale detection middleware:\n```typescript\n// middleware.ts\nimport { NextRequest, NextResponse } from 'next/server';\n\nconst PUBLIC_FILE = /\\.(.*)$/;\n\nexport function middleware(request: NextRequest) {\n  const { pathname } = request.nextUrl;\n  \n  if (\n    pathname.startsWith('/_next') ||\n    pathname.includes('/api/') ||\n    PUBLIC_FILE.test(pathname)\n  ) {\n    return;\n  }\n  \n  // Check if there is any supported locale in the pathname\n  const pathnameHasLocale = ['id', 'en'].some(\n    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`\n  );\n  \n  if (pathnameHasLocale) return;\n  \n  // Redirect to default locale\n  const locale = request.cookies.get('NEXT_LOCALE')?.value || 'id';\n  request.nextUrl.pathname = `/${locale}${pathname}`;\n  \n  return NextResponse.redirect(request.nextUrl);\n}\n```\n4. Create translation files in `/locales/id` and `/locales/en`\n5. Implement a language switcher component that persists selection via cookie\n6. Add proper hreflang tags in the document head",
+        "testStrategy": "1. Test language detection based on browser settings\n2. Verify manual language switching works and persists via cookie\n3. Confirm URL structure changes appropriately with locale prefix\n4. Test that all pages render correctly in both languages\n5. Validate hreflang tags are correctly implemented for SEO",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Design System Implementation",
+        "description": "Set up the design system with Tailwind CSS and MagicUI components according to the specified design language.",
+        "details": "1. Configure Tailwind CSS theme in `tailwind.config.js`:\n```javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        // Define brand colors\n      },\n      borderRadius: {\n        '2xl': '1rem', // As per design requirements\n      },\n      fontFamily: {\n        sans: ['Inter', 'sans-serif'],\n      },\n    },\n  },\n  plugins: [],\n}\n```\n2. Set up MagicUI components integration\n3. Create base components:\n   - Button (primary, secondary, CTA variants)\n   - Card with 2xl rounded corners\n   - Typography components (headings, body text)\n   - Gradient backgrounds\n   - Micro-interactions with 100ms duration\n4. Implement responsive breakpoints: sm, md, lg, 2xl\n5. Create a component showcase page for development\n6. Ensure all components meet AA accessibility standards (4.5:1 contrast ratio)\n7. Implement dark/light mode toggle if required",
+        "testStrategy": "1. Visual inspection of all components against design specifications\n2. Test components at all breakpoints for responsive behavior\n3. Verify accessibility using axe DevTools for contrast ratios\n4. Test micro-interactions for timing and smoothness\n5. Validate font loading and fallbacks",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Landing Page Hero Section",
+        "description": "Implement the hero section of the landing page with the main tagline, CTA button, and visual elements.",
+        "details": "1. Create a responsive hero component with:\n   - Headline: \"Book live talent in seconds\" (localized)\n   - Subheadline highlighting key value propositions\n   - Primary CTA button linking to WhatsApp\n   - Background with soft gradient\n   - Hero image optimized with Next/Image\n2. Implement MagicUI animations for visual appeal\n3. Ensure text is keyword-optimized with \"Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia\" as H1\n4. Optimize for mobile-first approach\n5. Add scroll-down indicator\n6. Implement GA4 event tracking for CTA clicks\n7. Set priority={true} on hero image for LCP optimization",
+        "testStrategy": "1. Test responsiveness across all breakpoints\n2. Verify CTA button links correctly to WhatsApp\n3. Check loading performance of hero image\n4. Validate SEO elements (H1, keywords)\n5. Test animations for performance impact\n6. Verify GA4 event fires on CTA click",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "WhatsApp CTA Implementation",
+        "description": "Implement the primary WhatsApp CTA with deep linking and tracking functionality.",
+        "details": "1. Create a WhatsApp button component with:\n```typescript\ninterface WhatsAppButtonProps {\n  phoneNumber: string;\n  message: string;\n  label: string;\n  variant?: 'primary' | 'floating';\n  trackingId?: string;\n}\n\nconst WhatsAppButton: React.FC<WhatsAppButtonProps> = ({\n  phoneNumber,\n  message,\n  label,\n  variant = 'primary',\n  trackingId,\n}) => {\n  const handleClick = () => {\n    // GA4 tracking\n    window.gtag?.('event', 'whatsapp_click', {\n      event_category: 'engagement',\n      event_label: trackingId || 'default',\n    });\n  };\n  \n  const encodedMessage = encodeURIComponent(message);\n  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;\n  \n  return (\n    <a \n      href={whatsappUrl}\n      target=\"_blank\"\n      rel=\"noopener noreferrer\"\n      onClick={handleClick}\n      className={`whatsapp-button ${variant}`}\n    >\n      {label}\n    </a>\n  );\n};\n```\n2. Implement floating CTA badge using MagicUI\n3. Create different message templates for different user intents\n4. Ensure button is touch-friendly (min 44px)\n5. Add visual feedback on hover/tap\n6. Implement proper GA4 event tracking\n7. Make button text and phone number configurable via environment variables",
+        "testStrategy": "1. Test WhatsApp deep linking on mobile and desktop\n2. Verify GA4 events fire correctly\n3. Test floating badge behavior on scroll\n4. Validate touch target size on mobile devices\n5. Test with different message templates\n6. Verify visual feedback works correctly",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Landing Page How-It-Works Section",
+        "description": "Create the How-It-Works section explaining the booking process with step-by-step visuals.",
+        "details": "1. Design a 3-4 step process visualization:\n   - Step 1: Choose your event type\n   - Step 2: Select artist/band type\n   - Step 3: Contact via WhatsApp\n   - Step 4: Confirm booking\n2. Create responsive card components for each step\n3. Implement scroll-triggered animations using MagicUI\n4. Add appropriate icons and visuals\n5. Ensure content is keyword-optimized\n6. Make section fully responsive\n7. Include secondary CTA button at the end of the section",
+        "testStrategy": "1. Test responsiveness across all breakpoints\n2. Verify scroll animations trigger correctly\n3. Check for proper keyword inclusion\n4. Test secondary CTA functionality\n5. Validate accessibility of the section\n6. Test with screen readers",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Landing Page Trust Badges Section",
+        "description": "Implement the trust badges section to build credibility with potential customers.",
+        "details": "1. Create a trust badges component with:\n   - Client logos (if available)\n   - Review stars/ratings\n   - Number of successful bookings\n   - Years in business\n2. Design in a responsive grid/carousel format\n3. Implement lazy loading for images\n4. Add subtle animations on scroll\n5. Include testimonial quotes if available\n6. Ensure all trust elements are factually accurate\n7. Make component reusable across pages",
+        "testStrategy": "1. Verify all images load correctly\n2. Test responsiveness of the grid/carousel\n3. Check lazy loading implementation\n4. Validate animations performance\n5. Test with various screen sizes\n6. Verify factual accuracy of all claims",
+        "priority": "medium",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Landing Page FAQ Section with Schema",
+        "description": "Create an FAQ section with structured data for SEO optimization.",
+        "details": "1. Implement an accordion-style FAQ component\n2. Include questions targeting long-tail keywords:\n   - \"Berapa harga sewa band untuk pernikahan?\"\n   - \"Bagaimana cara booking penyanyi untuk acara kantor?\"\n   - \"Apakah ArtistLive menyediakan band untuk acara sekolah?\"\n3. Add JSON-LD FAQPage schema:\n```typescript\nconst FAQSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Berapa harga sewa band untuk pernikahan?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Answer text here...\"\n      }\n    },\n    // Additional questions\n  ]\n};\n```\n4. Ensure accordion is accessible with keyboard navigation\n5. Implement smooth open/close animations\n6. Make FAQ content editable via CMS or config files\n7. Ensure natural keyword density (2-3%)",
+        "testStrategy": "1. Test accordion functionality\n2. Validate JSON-LD schema with Google's Rich Results Test\n3. Check keyboard accessibility\n4. Test animations for smoothness\n5. Verify content is properly keyword-optimized\n6. Test screen reader compatibility",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Footer Implementation",
+        "description": "Create a responsive footer with navigation, legal links, and contact information.",
+        "details": "1. Design a responsive footer with:\n   - Logo\n   - Navigation links\n   - Legal links (Privacy Policy, Terms)\n   - Contact information\n   - Language switcher\n   - Social media links (if applicable)\n2. Include business registration details for Indonesian compliance\n3. Add copyright information\n4. Implement responsive layout for all breakpoints\n5. Ensure all links are properly labeled for accessibility\n6. Add structured data for Organization\n7. Include sitemap link",
+        "testStrategy": "1. Test all links for correct destinations\n2. Verify responsiveness across breakpoints\n3. Check accessibility of all interactive elements\n4. Validate structured data\n5. Test language switcher functionality\n6. Verify all required legal information is present",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Navigation and Header Implementation",
+        "description": "Create a responsive navigation header with language switcher and mobile menu.",
+        "details": "1. Implement a responsive header with:\n   - Logo\n   - Navigation links\n   - Language switcher\n   - Mobile hamburger menu\n2. Create smooth mobile menu animation\n3. Implement language switcher with flag icons\n4. Add scroll behavior (sticky or hide on scroll)\n5. Ensure proper focus management for accessibility\n6. Add active state for current page\n7. Implement proper aria attributes for screen readers",
+        "testStrategy": "1. Test responsive behavior across breakpoints\n2. Verify mobile menu opens and closes correctly\n3. Test language switching functionality\n4. Check scroll behavior\n5. Validate keyboard navigation\n6. Test with screen readers\n7. Verify active state updates correctly",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "SEO Meta Tags and Structured Data",
+        "description": "Implement comprehensive SEO meta tags and structured data across the site.",
+        "details": "1. Create a reusable SEO component:\n```typescript\ninterface SEOProps {\n  title?: string;\n  description?: string;\n  canonical?: string;\n  locale?: 'id' | 'en';\n  ogImage?: string;\n  structuredData?: Record<string, any>;\n}\n\nconst SEO: React.FC<SEOProps> = ({\n  title = 'Sewa Band & Penyanyi Live untuk Acara | ArtistLive',\n  description = 'Default description...',\n  canonical,\n  locale = 'id',\n  ogImage,\n  structuredData,\n}) => {\n  const alternateLocale = locale === 'id' ? 'en' : 'id';\n  \n  return (\n    <Head>\n      <title>{title}</title>\n      <meta name=\"description\" content={description} />\n      {canonical && <link rel=\"canonical\" href={canonical} />}\n      <link rel=\"alternate\" hrefLang={locale} href={`https://artistlive.id/${locale}`} />\n      <link rel=\"alternate\" hrefLang={alternateLocale} href={`https://artistlive.id/${alternateLocale}`} />\n      \n      <meta property=\"og:title\" content={title} />\n      <meta property=\"og:description\" content={description} />\n      <meta property=\"og:url\" content={canonical} />\n      <meta property=\"og:image\" content={ogImage} />\n      <meta property=\"og:type\" content=\"website\" />\n      \n      <meta name=\"twitter:card\" content=\"summary_large_image\" />\n      <meta name=\"twitter:title\" content={title} />\n      <meta name=\"twitter:description\" content={description} />\n      <meta name=\"twitter:image\" content={ogImage} />\n      \n      {structuredData && (\n        <script\n          type=\"application/ld+json\"\n          dangerouslySetInnerHTML={{\n            __html: JSON.stringify(structuredData),\n          }}\n        />\n      )}\n    </Head>\n  );\n};\n```\n2. Implement Organization schema with @graph\n3. Create FAQPage schema for FAQ section\n4. Add proper hreflang tags for language variants\n5. Implement canonical URLs\n6. Create Open Graph and Twitter Card tags\n7. Optimize title tags and meta descriptions for target keywords",
+        "testStrategy": "1. Validate structured data using Google's Rich Results Test\n2. Check meta tags with meta tag analyzers\n3. Verify hreflang implementation\n4. Test Open Graph tags with Facebook Debugger\n5. Validate Twitter Card tags\n6. Check canonical URLs are correctly implemented",
+        "priority": "high",
+        "dependencies": [
+          2,
+          4,
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Blog Page Implementation",
+        "description": "Create the blog page structure with MDX support for SEO-focused content.",
+        "details": "1. Set up MDX support with next-mdx-remote:\n```bash\nnpm install next-mdx-remote gray-matter\n```\n2. Create blog page layout with:\n   - Featured post section\n   - Post grid/list\n   - Category/tag filtering\n   - Pagination\n3. Implement MDX rendering component\n4. Set up blog post schema and frontmatter structure\n5. Create responsive post card component\n6. Implement SEO optimization for blog listing\n7. Add structured data for BlogPosting schema",
+        "testStrategy": "1. Test MDX rendering with sample content\n2. Verify responsive behavior of blog layout\n3. Check pagination functionality\n4. Validate structured data\n5. Test with various content lengths\n6. Verify SEO elements are correctly implemented\n7. Test loading performance with multiple posts",
+        "priority": "medium",
+        "dependencies": [
+          2,
+          3,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Blog Post Template",
+        "description": "Create a template for individual blog posts with SEO optimization.",
+        "details": "1. Design blog post template with:\n   - Featured image\n   - Title (H1)\n   - Publication date\n   - Author information\n   - Content area with proper heading hierarchy\n   - Related posts\n   - Social sharing\n2. Implement MDX components for enhanced content\n3. Add TableOfContents component\n4. Optimize for readability (typography, spacing)\n5. Implement structured data for BlogPosting\n6. Add internal linking opportunities\n7. Create responsive image handling",
+        "testStrategy": "1. Test with various content lengths and structures\n2. Verify responsive behavior\n3. Check structured data implementation\n4. Test social sharing functionality\n5. Validate SEO elements\n6. Test with different image sizes\n7. Verify reading experience on mobile devices",
+        "priority": "medium",
+        "dependencies": [
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "n8n Blog Content Pipeline",
+        "description": "Set up the automated blog content pipeline using n8n and OpenAI.",
+        "details": "1. Create n8n workflow for blog generation:\n   - Input: Target keywords and content brief\n   - Process: OpenAI API call for content generation\n   - Output: MDX file with frontmatter\n2. Implement plagiarism checking step\n3. Set up GitHub integration for automated commits\n4. Create content review process\n5. Implement frontmatter schema:\n```yaml\n---\ntitle: \"Post Title with Keyword\"\nslug: \"post-slug\"\ndescription: \"Meta description with keyword\"\ndate: \"2023-06-18\"\nfeaturedImage: \"/images/blog/featured-image.jpg\"\nkeywords: [\"keyword1\", \"keyword2\"]\nlanguage: \"id\" # or \"en\"\n---\n```\n6. Set up scheduling for 4 posts per month\n7. Implement content quality checks",
+        "testStrategy": "1. Test end-to-end workflow with sample keywords\n2. Verify MDX output format\n3. Check plagiarism detection\n4. Test GitHub integration\n5. Validate frontmatter schema\n6. Verify scheduling functionality\n7. Test content quality metrics",
+        "priority": "medium",
+        "dependencies": [
+          12,
+          13
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Privacy Policy and Terms Page",
+        "description": "Create legally compliant Privacy Policy and Terms of Service pages for both languages.",
+        "details": "1. Implement Privacy Policy page with:\n   - Data collection practices\n   - Cookie usage\n   - User rights under PDP Law No. 27/2022\n   - Data retention policies\n   - Contact information\n2. Create Terms of Service page\n3. Ensure both are available in Indonesian and English\n4. Add last updated date\n5. Implement proper heading structure for readability\n6. Add internal navigation for long documents\n7. Ensure mobile-friendly layout",
+        "testStrategy": "1. Legal review of content for compliance\n2. Verify both language versions are complete\n3. Check responsive layout\n4. Test internal navigation\n5. Validate heading structure\n6. Verify all required legal elements are present\n7. Test readability on mobile devices",
+        "priority": "high",
+        "dependencies": [
+          2,
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 16,
+        "title": "404 Page Implementation",
+        "description": "Create a user-friendly 404 page with navigation options.",
+        "details": "1. Design a branded 404 page with:\n   - Clear error message\n   - Navigation options to key pages\n   - Search functionality (optional)\n   - Visual element (illustration/animation)\n2. Implement in both languages\n3. Add tracking for 404 occurrences\n4. Ensure proper HTTP status code\n5. Implement suggestions for popular content\n6. Add WhatsApp CTA as alternative\n7. Ensure responsive design",
+        "testStrategy": "1. Test with non-existent URLs\n2. Verify proper 404 HTTP status\n3. Check language switching\n4. Test navigation options\n5. Verify tracking implementation\n6. Test responsive behavior\n7. Validate accessibility",
+        "priority": "low",
+        "dependencies": [
+          2,
+          3,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 17,
+        "title": "Sitemap and Robots.txt Implementation",
+        "description": "Generate sitemap.xml and configure robots.txt for proper search engine crawling.",
+        "details": "1. Install next-sitemap:\n```bash\nnpm install next-sitemap\n```\n2. Configure next-sitemap.config.js:\n```javascript\nmodule.exports = {\n  siteUrl: 'https://artistlive.id',\n  generateRobotsTxt: true,\n  robotsTxtOptions: {\n    policies: [\n      { userAgent: '*', allow: '/' },\n      { userAgent: '*', disallow: '/api/' },\n      // Block Netlify preview URLs\n      { userAgent: '*', disallow: '/preview/' },\n    ],\n    additionalSitemaps: [\n      'https://artistlive.id/sitemap-blog.xml',\n    ],\n  },\n  exclude: ['/preview/*'],\n  // Handle localized routes\n  alternateRefs: [\n    {\n      href: 'https://artistlive.id/en',\n      hreflang: 'en',\n    },\n    {\n      href: 'https://artistlive.id/id',\n      hreflang: 'id',\n    },\n  ],\n};\n```\n3. Add sitemap generation to build process\n4. Create separate sitemap for blog content\n5. Implement hreflang in sitemap\n6. Configure robots.txt to block preview URLs\n7. Add sitemap submission to GSC in deployment process",
+        "testStrategy": "1. Validate sitemap.xml format\n2. Check robots.txt configuration\n3. Verify all pages are included in sitemap\n4. Test hreflang implementation\n5. Validate with Google Search Console\n6. Check sitemap index if using multiple sitemaps\n7. Verify preview URLs are blocked",
+        "priority": "high",
+        "dependencies": [
+          2,
+          4,
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 18,
+        "title": "Google Analytics 4 Integration",
+        "description": "Implement GA4 tracking with custom events for conversion tracking.",
+        "details": "1. Create GA4 property and obtain measurement ID\n2. Implement GA4 with gtag.js:\n```typescript\n// lib/gtag.ts\nexport const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID;\n\n// https://developers.google.com/analytics/devguides/collection/gtagjs/pages\nexport const pageview = (url: string) => {\n  window.gtag?.('config', GA_MEASUREMENT_ID, {\n    page_path: url,\n  });\n};\n\n// https://developers.google.com/analytics/devguides/collection/gtagjs/events\nexport const event = ({ action, category, label, value }: {\n  action: string;\n  category: string;\n  label: string;\n  value?: number;\n}) => {\n  window.gtag?.('event', action, {\n    event_category: category,\n    event_label: label,\n    value,\n  });\n};\n```\n3. Create custom events:\n   - whatsapp_click\n   - language_switch\n   - outbound_click\n4. Implement cookie consent for GDPR/PDP compliance\n5. Set up conversion tracking for WhatsApp clicks\n6. Create custom dimensions for tracking locale\n7. Implement enhanced measurement for scroll depth",
+        "testStrategy": "1. Verify GA4 events fire correctly\n2. Test with cookie consent accepted/rejected\n3. Validate conversion tracking\n4. Check custom dimensions\n5. Test across different pages and user flows\n6. Verify data appears in GA4 reports\n7. Test with various browsers and devices",
+        "priority": "high",
+        "dependencies": [
+          4,
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 19,
+        "title": "Google Search Console Integration",
+        "description": "Set up Google Search Console for SEO monitoring and performance tracking.",
+        "details": "1. Create GSC property for artistlive.id\n2. Verify ownership via HTML tag or DNS\n3. Submit sitemap.xml\n4. Set up international targeting for language variants\n5. Configure user permissions\n6. Create performance monitoring dashboard\n7. Set up email alerts for critical issues",
+        "testStrategy": "1. Verify site ownership confirmation\n2. Check sitemap submission status\n3. Validate international targeting settings\n4. Test user access permissions\n5. Verify data collection is working\n6. Check mobile usability reports\n7. Test Core Web Vitals reporting",
+        "priority": "medium",
+        "dependencies": [
+          11,
+          17
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 20,
+        "title": "Performance Optimization",
+        "description": "Optimize website performance to meet Core Web Vitals and Lighthouse score requirements.",
+        "details": "1. Implement image optimization:\n   - Use Next/Image with priority for above-fold images\n   - Configure image sizes and formats (WebP)\n   - Implement lazy loading for below-fold images\n2. Optimize JavaScript:\n   - Implement code splitting\n   - Use dynamic imports for non-critical components\n   - Minimize third-party scripts\n3. Implement font optimization:\n   - Use `next/font` for optimized loading\n   - Specify font display strategy\n4. Configure caching headers:\n   - Set appropriate cache-control headers\n   - Implement stale-while-revalidate where appropriate\n5. Optimize CSS:\n   - Purge unused styles\n   - Critical CSS extraction\n6. Implement preloading for critical resources\n7. Enable Netlify Edge Functions for TTFB optimization",
+        "testStrategy": "1. Run Lighthouse audits (Performance, Accessibility, SEO)\n2. Test Core Web Vitals (LCP, FID, CLS)\n3. Measure TTI on simulated 3G connection\n4. Verify image optimization\n5. Check JavaScript bundle sizes\n6. Test font loading performance\n7. Validate caching implementation",
+        "priority": "high",
+        "dependencies": [
+          4,
+          10,
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 21,
+        "title": "Accessibility Implementation",
+        "description": "Ensure WCAG 2.1 AA compliance across the website.",
+        "details": "1. Implement keyboard navigation:\n   - Proper focus management\n   - Skip to content link\n   - Focus visible styles\n2. Add proper ARIA attributes:\n   - aria-label\n   - aria-expanded\n   - aria-controls\n   - aria-hidden\n3. Ensure proper color contrast (4.5:1 minimum)\n4. Implement proper heading hierarchy\n5. Add alt text to all images\n6. Ensure form elements have associated labels\n7. Test with screen readers (NVDA, VoiceOver)",
+        "testStrategy": "1. Run axe DevTools accessibility audit\n2. Test keyboard navigation flow\n3. Verify color contrast with WebAIM tool\n4. Test with screen readers\n5. Check heading hierarchy\n6. Validate form accessibility\n7. Test focus management",
+        "priority": "high",
+        "dependencies": [
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 22,
+        "title": "Cookie Consent Implementation",
+        "description": "Implement cookie consent management for compliance with PDP Law and GDPR.",
+        "details": "1. Create cookie consent banner component:\n```typescript\ninterface CookieConsentProps {\n  onAccept: () => void;\n  onDecline: () => void;\n}\n\nconst CookieConsent: React.FC<CookieConsentProps> = ({ onAccept, onDecline }) => {\n  // Implementation\n};\n```\n2. Store consent in cookie/localStorage\n3. Implement conditional loading of analytics based on consent\n4. Create detailed cookie policy page\n5. Add opt-out mechanism\n6. Ensure banner is dismissible\n7. Make consent specific to different cookie types (necessary, analytics, etc.)",
+        "testStrategy": "1. Test consent storage mechanism\n2. Verify analytics only load with consent\n3. Check persistence across sessions\n4. Test opt-out functionality\n5. Validate compliance with PDP Law requirements\n6. Test on various browsers and devices\n7. Verify accessibility of consent banner",
+        "priority": "high",
+        "dependencies": [
+          15,
+          18
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 23,
+        "title": "Cross-Browser Testing",
+        "description": "Ensure website compatibility across all target browsers and devices.",
+        "details": "1. Test on major browsers:\n   - Chrome (latest)\n   - Safari (latest)\n   - Firefox (latest)\n   - Edge (latest)\n2. Test on mobile browsers:\n   - Chrome for Android\n   - Safari for iOS\n3. Test responsive behavior across breakpoints\n4. Verify critical user flows:\n   - Navigation\n   - WhatsApp CTA\n   - Language switching\n5. Check for visual consistency\n6. Test performance across browsers\n7. Verify accessibility features work across browsers",
+        "testStrategy": "1. Create test matrix for browser/device combinations\n2. Use BrowserStack or similar for testing\n3. Document and fix any browser-specific issues\n4. Test with different network conditions\n5. Verify animations and transitions\n6. Check font rendering across browsers\n7. Test with various screen sizes and resolutions",
+        "priority": "medium",
+        "dependencies": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20,
+          21
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 24,
+        "title": "Netlify Deployment Configuration",
+        "description": "Configure Netlify for optimal deployment and environment management.",
+        "details": "1. Create netlify.toml configuration:\n```toml\n[build]\n  command = \"npm run build\"\n  publish = \".next\"\n\n[build.environment]\n  NODE_VERSION = \"18.17.0\"\n\n# Production context\n[context.production]\n  command = \"npm run build && npm run sitemap\"\n\n# Deploy Preview context\n[context.deploy-preview]\n  command = \"npm run build\"\n\n# Branch Deploy context\n[context.branch-deploy]\n  command = \"npm run build\"\n\n# Redirects and headers\n[[redirects]]\n  from = \"/*\"\n  to = \"/404\"\n  status = 404\n\n[[headers]]\n  for = \"/*\"\n  [headers.values]\n    X-Frame-Options = \"DENY\"\n    X-XSS-Protection = \"1; mode=block\"\n    X-Content-Type-Options = \"nosniff\"\n    Referrer-Policy = \"strict-origin-when-cross-origin\"\n    Content-Security-Policy = \"default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com;\"\n\n# Enable Netlify Edge Functions\n[functions]\n  directory = \"netlify/functions\"\n\n[dev]\n  framework = \"#static\"\n  command = \"npm run dev\"\n  port = 8888\n  targetPort = 3000\n  publish = \".next\"\n  autoLaunch = true\n```\n2. Set up environment variables\n3. Configure build hooks for content updates\n4. Set up branch preview deployments\n5. Configure custom domain and SSL\n6. Set up deploy notifications\n7. Implement post-processing for optimizations",
+        "testStrategy": "1. Test build process in Netlify environment\n2. Verify environment variables are correctly applied\n3. Test preview deployments\n4. Check custom domain configuration\n5. Validate SSL setup\n6. Test build hooks\n7. Verify post-processing optimizations",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 25,
+        "title": "Content Translation Workflow",
+        "description": "Implement a workflow for managing bilingual content across the site.",
+        "details": "1. Create translation files structure:\n```\n/locales\n  /en\n    common.json\n    home.json\n    blog.json\n  /id\n    common.json\n    home.json\n    blog.json\n```\n2. Implement translation loading utility:\n```typescript\n// lib/i18n.ts\nimport { useRouter } from 'next/router';\n\nexport function useTranslation() {\n  const router = useRouter();\n  const locale = router.locale || 'id';\n  \n  const t = (key: string, namespace = 'common') => {\n    try {\n      const translations = require(`../locales/${locale}/${namespace}.json`);\n      return key.split('.').reduce((o, i) => o[i], translations);\n    } catch (error) {\n      return key;\n    }\n  };\n  \n  return { t, locale };\n}\n```\n3. Create translation review process\n4. Implement fallback mechanism for missing translations\n5. Add translation context provider\n6. Create utility for dynamic content translation\n7. Implement SEO keyword adaptation per language",
+        "testStrategy": "1. Verify translations load correctly\n2. Test fallback mechanism\n3. Check SEO keyword adaptation\n4. Validate all UI elements are translated\n5. Test with missing translation keys\n6. Verify context switching works correctly\n7. Test performance impact of translation loading",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 26,
+        "title": "SEO Keyword Implementation",
+        "description": "Implement target keywords throughout the site content for SEO optimization.",
+        "details": "1. Create keyword mapping document:\n   - Primary: \"sewa band\" (1k volume)\n   - Secondary: \"sewa band Jakarta\" (500 volume), \"sewa band pernikahan\" (800 volume)\n   - Long-tail: \"booking penyanyi solo acara kantor\", \"harga sewa band pernikahan\"\n   - Local variants: Jakarta, Bandung, Surabaya\n2. Implement keywords in:\n   - Page titles\n   - Meta descriptions\n   - H1, H2, H3 headings\n   - URL structures\n   - Image alt text\n   - Internal link anchor text\n3. Maintain natural keyword density (2-3%)\n4. Create content sections targeting specific keywords\n5. Implement location-based content variations\n6. Add FAQ content targeting long-tail queries\n7. Implement structured data with keywords",
+        "testStrategy": "1. Audit keyword placement across pages\n2. Check keyword density with SEO tools\n3. Verify natural language usage\n4. Test structured data implementation\n5. Validate meta tags contain target keywords\n6. Check heading hierarchy includes keywords\n7. Verify internal linking uses keyword-rich anchors",
+        "priority": "high",
+        "dependencies": [
+          4,
+          6,
+          7,
+          8,
+          11,
+          12,
+          13
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 27,
+        "title": "Monitoring and Analytics Dashboard",
+        "description": "Set up monitoring and analytics dashboard for tracking performance metrics.",
+        "details": "1. Configure GA4 dashboard with key metrics:\n   - Organic sessions\n   - WhatsApp click conversions\n   - Bounce rate\n   - User engagement\n   - Language preferences\n2. Set up GSC performance monitoring\n3. Implement Core Web Vitals tracking\n4. Create custom reports for business metrics\n5. Set up alerts for critical thresholds\n6. Implement A/B testing framework (optional)\n7. Create regular reporting schedule",
+        "testStrategy": "1. Verify data collection in GA4\n2. Check custom dimension reporting\n3. Validate conversion tracking\n4. Test alert thresholds\n5. Verify Core Web Vitals reporting\n6. Check GSC integration\n7. Test dashboard access and permissions",
+        "priority": "medium",
+        "dependencies": [
+          18,
+          19
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 28,
+        "title": "Launch Preparation and Checklist",
+        "description": "Create and execute a comprehensive launch checklist to ensure a successful deployment.",
+        "details": "1. Create pre-launch checklist:\n   - SEO audit (meta tags, structured data, sitemap)\n   - Performance audit (Core Web Vitals, Lighthouse)\n   - Accessibility audit (WCAG AA compliance)\n   - Cross-browser testing\n   - Mobile responsiveness\n   - Content review\n   - Legal compliance\n2. Configure DNS settings\n3. Set up SSL certificate\n4. Implement redirects for any legacy URLs\n5. Configure backup and rollback procedures\n6. Create launch announcement content\n7. Set up post-launch monitoring",
+        "testStrategy": "1. Complete full site crawl for broken links/issues\n2. Verify all checklist items are completed\n3. Test DNS configuration\n4. Validate SSL setup\n5. Check redirects functionality\n6. Test backup and rollback procedures\n7. Verify monitoring is active",
+        "priority": "high",
+        "dependencies": [
+          11,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-07-07T14:34:05.271Z",
+      "updated": "2025-07-07T14:34:05.271Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

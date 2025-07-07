@@ -1,0 +1,321 @@
+ArtistLive.id - Product Requirements Document (PRD)
+
+=== EXECUTIVE SUMMARY ===
+
+Re-platform artistlive.id from a thin brochure site to a bilingual, conversion-optimized landing page. Build on Next.js 15.1 LTS for React 19 stability and MagicUI's 150+ animated React/Tailwind components for fast, on-brand visuals. Primary CTA = deep-link to WhatsApp. Success is 150 inbound booking requests and 10 new-artist sign-ups per month within 12 months of launch.
+
+Target Indonesian market with high-intent queries for booking live musicians and singers. Achieve ≥3,000 organic sessions/month within 6 months and rank top-3 for "sewa band" within 4 months.
+
+=== 1. OBJECTIVES & SUCCESS METRICS ===
+
+Business Metrics:
+- Qualified WhatsApp leads: ≥150 unique clicks on primary CTA → "wa.me/xyz" per month
+- Artist sign-ups: ≥10 completed onboarding forms (Google Sheet) per month
+- Bounce rate: <35% (sessions > 10s)
+- TTI (Time-to-Interactive): <2.5s on 3G Lighthouse
+
+SEO Metrics:
+- Organic sessions: ≥3,000/month within 6 months
+- Qualified WhatsApp clicks from organic: ≥60/month
+- Top-3 SERP rank for "sewa band": Within 4 months of launch
+- Track via GA4 → Traffic Acquisition (Organic) and GSC
+
+=== 2. TARGET AUDIENCES & MARKET ===
+
+Primary Audiences:
+- Bookers (demand): Event planners, couples, corporate HR/EO, brands, venues; value speed & trust
+- Artists & Agencies (supply): Need low-friction onboarding
+- Students/teachers: Find bands for school concerts (pensi)
+
+Intent Mapping:
+- Event planners/couples: Book wedding bands/singers ("sewa band pernikahan")
+- Corporate HR/EO: Hire entertainment for office events ("sewa band acara kantor")  
+- Students/teachers: Find bands for school concerts ("band pensi sekolah")
+
+Locale Strategy:
+- Default id-ID, toggle to en-US
+- Both routed via Next.js built-in i18n
+- Prioritize Indonesian market with localized SEO
+
+=== 3. SCOPE & FUNCTIONAL REQUIREMENTS ===
+
+3.1 Core Pages:
+1. Landing (Hero, How-it-works, Trust badges, FAQ, CTA)
+2. Blog (SEO-focused; MDX, generated via n8n OpenAI)
+3. Privacy Policy & Terms (PDP Law compliance)
+4. 404 page
+5. Sitemap and robots.txt
+
+3.2 Key Features:
+
+F-01: Bilingual Toggle
+- Locale switch in navbar; persists via cookie
+- All strings available in i18n.ts JSON
+- Routes: /id and /en paths with proper hreflang
+
+F-02: WhatsApp CTA Optimization
+- Button uses https://wa.me/<intl-number>?text=<msg> deep link
+- Fires GA4 event: 'whatsapp_click'
+- Floating CTA badge using MagicUI
+- Track conversion funnel from organic → WhatsApp
+
+F-03: Responsive Design
+- Breakpoints: sm, md, lg, 2xl
+- Content remains legible, images optimized by <Image> component
+- Mobile-first approach for Indonesian mobile users
+
+F-04: SEO-Optimized Blog Pipeline
+- n8n workflow writes Markdown → MDX → content/blog/*.mdx
+- Site rebuilds on push
+- Target mid/long-tail keywords + city variants
+- 4 auto-generated posts/month via OpenAI
+- Structure: H1 with keyword, intro ≤120 words, H2/H3 with related questions
+
+F-05: Accessibility AA Compliance
+- Color contrast ≥4.5:1 (Level AA)
+- Keyboard navigation
+- Focus states visible
+- Alt-text with keywords in context
+
+F-06: SEO Technical Implementation
+- Meta tags optimization per locale route
+- Structured data with @graph (Organization, FAQPage)
+- Internal linking with keyword anchor text
+- Image optimization with Next/Image + WebP
+
+3.3 Out of Scope:
+- Payment flow (handled in WhatsApp)
+- Artist dashboard (future sprint)
+- .co domain migration (handled by separate team)
+
+=== 4. SEO STRATEGY INTEGRATION ===
+
+4.1 Priority Keyword Matrix:
+- Primary: "sewa band" (1k volume, Med difficulty)
+- Secondary: "sewa band Jakarta" (500 volume), "sewa band pernikahan" (800 volume)
+- Long-tail: "booking penyanyi solo acara kantor", "harga sewa band pernikahan"
+- Local variants: Include Jakarta, Bandung, Surabaya variations
+
+4.2 On-Page Optimization:
+- Title Tag ≤60 chars: "Sewa Band & Penyanyi Live untuk Acara | ArtistLive"
+- Meta Description ≤155 chars highlighting weddings, kantor, pensi, CTA
+- H1: "Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia"
+- H2 Sections: Band Pernikahan, Musik Acara Kantor, Band Pensi & Sekolah, Band Ulang Tahun & Private Event
+
+4.3 Content Strategy:
+- Tone: Simple, assistant-like, avoid clichés
+- Hero tagline: "Book live talent in seconds"
+- FAQ with JSON-LD FAQPage schema
+- Include price + booking process questions using long-tails
+- Natural keyword density ≤2-3%
+
+4.4 Technical SEO Requirements:
+- Auto-generate sitemap with next-sitemap
+- Robots.txt allowing all, blocking Netlify preview URLs
+- Core Web Vitals: LCP <2.5s, lazy-load below-fold images
+- Enable Edge Functions for TTFB optimization
+
+=== 5. DESIGN & UX REQUIREMENTS ===
+
+Design Language:
+- Look & feel: Friendly, familiar, helpful
+- Soft gradients, rounded 2xl cards
+- Motion micro-interactions from MagicUI (limit to 100ms duration)
+- Font stack: Inter, fallback sans-serif
+
+Interactive Elements:
+- MagicUI "Floating CTA Badge" for WhatsApp
+- Scroll-triggered fade-ins
+- Hover states for all interactive elements
+- Loading states for form submissions
+
+Mobile Optimization:
+- Touch-friendly CTAs (minimum 44px)
+- Thumb-friendly navigation
+- Fast loading on 3G networks
+- Optimized for Indonesian mobile usage patterns
+
+=== 6. TECHNICAL ARCHITECTURE ===
+
+Technology Stack:
+- Framework: Next.js 15.1, App Router, React 19 (Current LTS)
+- Rendering: Static Site Generation first; server-actions ready for future
+- Styling: Tailwind CSS + MagicUI for rapid UI development
+- Content: MDX for blog with frontmatter support
+- i18n: Next.js native routing with locale detection
+- Analytics: GA4 via gtag.js with custom events
+- Hosting: Netlify CD with deploy contexts
+
+Performance Requirements:
+- Lighthouse scores: Performance >90, Accessibility >90, SEO >95
+- Image optimization: Next/Image with WebP, set priority on hero
+- Code splitting: Route-based and component-based
+- Caching: Static assets with proper cache headers
+
+SEO Technical Implementation:
+- Dynamic meta tags per route and locale
+- JSON-LD structured data injection
+- Automatic XML sitemap generation
+- Proper canonical URLs and hreflang tags
+- Open Graph and Twitter Card support
+
+=== 7. COMPLIANCE & LEGAL ===
+
+Indonesian Compliance:
+- PDP Law No. 27/2022: Clear Privacy Policy, data retention explanation
+- Consent banner for GA4 cookies with proper opt-out
+- Terms of Service in both Indonesian and English
+- Contact information and business registration details
+
+Accessibility:
+- WCAG 2.1 AA compliance
+- Screen reader compatibility
+- Keyboard navigation support
+- Focus management and skip links
+
+Data Privacy:
+- No payment data processed → PCI out of scope
+- Cookie consent management
+- User data retention policies
+- GDPR-ready for future international expansion
+
+=== 8. ENVIRONMENTS & DEPLOYMENT ===
+
+Environment Strategy:
+- Staging: https://artistlive.netlify.app (Netlify preview on every push)
+- Production: https://artistlive.id (Manual "Promote to prod" in Netlify UI)
+- Development: Local Next.js dev server
+
+CI/CD Pipeline:
+- GitHub integration with Netlify
+- Automated builds on main branch
+- Preview deployments for feature branches
+- Environment-specific configuration management
+
+Monitoring & Analytics:
+- GA4 events: page_view, whatsapp_click, outbound_click, language_switch
+- GSC monitoring for target keywords
+- Console logging (future Sentry integration)
+- Core Web Vitals tracking
+
+=== 9. CONTENT PIPELINE ===
+
+Blog Automation:
+- n8n workflow integration with OpenAI
+- 4 posts/month targeting SEO keywords
+- Content structure: keyword-optimized H1, intro ≤120 words, H2/H3 sections
+- Manual review process to prevent duplicate content
+- Plagiarism checking before publication
+
+Translation Workflow:
+- Source strings in English → internal bilingual review
+- Commit to locales/id/ and locales/en/
+- Professional review for marketing copy
+- SEO keyword adaptation per language
+
+Content Quality Assurance:
+- Keyword density monitoring
+- Readability scoring (Indonesian language)
+- Brand voice consistency
+- Legal compliance review
+
+=== 10. MILESTONES & TIMELINE ===
+
+Phase 1 (D+7): Foundation
+- Project setup and environment configuration
+- Design system implementation (colors, components)
+- Basic page structure and routing
+
+Phase 2 (D+14): Core Development
+- MVP pages static implementation
+- SEO meta tags and structured data
+- Basic responsive design
+
+Phase 3 (D+21): Advanced Features
+- i18n implementation and content translation
+- Blog pipeline setup with n8n integration
+- WhatsApp CTA optimization
+
+Phase 4 (D+24): Analytics & Tracking
+- GA4 implementation and event tracking
+- GSC setup and keyword monitoring
+- Performance optimization
+
+Phase 5 (D+26): Quality Assurance
+- Accessibility testing and compliance
+- Cross-browser compatibility testing
+- SEO audit and optimization
+
+Phase 6 (D+28): Launch
+- Production deployment
+- DNS configuration
+- Post-launch monitoring setup
+
+=== 11. RISK MITIGATION ===
+
+SEO Risks:
+- Keyword stuffing: Write natural Indonesian prose, ≤2-3% density
+- Duplicate content from AI blog: Manual review + unique intros, plagiarism checker
+- Technical SEO issues: Comprehensive pre-launch audit
+
+Performance Risks:
+- Slow TTFB on Netlify: Enable Edge Functions, preload critical assets
+- Large bundle sizes: Implement proper code splitting and lazy loading
+- Poor mobile performance: Mobile-first development approach
+
+Business Risks:
+- Low conversion rates: A/B testing of CTA placement and messaging
+- Language/cultural barriers: Native Indonesian content review
+- Competition: Continuous keyword monitoring and content differentiation
+
+=== 12. ACCEPTANCE CRITERIA ===
+
+Content & Localization:
+- All copy available in locales/en & locales/id
+- SEO keywords properly integrated in natural Indonesian prose
+- Cultural appropriateness verified by native speakers
+
+Performance & Technical:
+- Lighthouse accessibility ≥90 on desktop & mobile
+- Core Web Vitals passing (LCP <2.5s, FID <100ms, CLS <0.1)
+- All structured data validating in Google's Rich Results Test
+
+Analytics & Tracking:
+- GA4 reporting events: page_view, whatsapp_click, language_switch
+- GSC property verified and tracking target keywords
+- Conversion funnel properly tagged and measurable
+
+Cross-Browser Compatibility:
+- Manual UAT passes in Chrome, Safari, Firefox, Edge
+- Mobile testing on Android Chrome and iOS Safari
+- Accessibility testing with screen readers
+
+SEO Validation:
+- All priority keywords appear at least once in visible copy
+- Meta tags optimized for each page and locale
+- Internal linking structure with keyword anchor text
+- FAQ schema properly implemented
+
+Launch Readiness:
+- Zero regressions in staging before promotion
+- SSL certificate properly configured
+- Domain DNS properly pointing to Netlify
+- Backup and rollback procedures documented
+
+=== SUCCESS MEASUREMENTS ===
+
+Month 1-3: Foundation Metrics
+- Site performance: TTI <2.5s, bounce rate <35%
+- Basic SEO: Initial keyword rankings tracked
+- Technical: Zero critical errors, 100% uptime
+
+Month 4-6: Growth Metrics
+- Traffic: ≥1,500 organic sessions/month (50% of target)
+- Conversions: ≥75 WhatsApp clicks/month (50% of target)
+- SEO: Top-10 rankings for primary keywords
+
+Month 7-12: Target Achievement
+- Traffic: ≥3,000 organic sessions/month
+- Conversions: ≥150 WhatsApp leads + ≥10 artist sign-ups/month
+- SEO: Top-3 rankings for "sewa band" and related terms
+- Business: Sustainable growth trajectory established 
