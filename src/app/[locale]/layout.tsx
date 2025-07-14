@@ -92,12 +92,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: currentMetadata.openGraph.title,
       description: currentMetadata.openGraph.description,
       siteName: 'ArtistLive.id',
+      images: [
+        {
+          url: '/images/logo/with_padding.png',
+          width: 1200,
+          height: 630,
+          alt: 'ArtistLive.id - Live Music Booking Platform',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: currentMetadata.twitter.title,
       description: currentMetadata.twitter.description,
       creator: '@artistlive_id',
+      images: ['/images/logo/with_padding.png'],
     },
     robots: {
       index: true,
@@ -125,7 +134,8 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <meta name="theme-color" content="#0a0a0a" /> {/* Premium Brand Identity: Midnight Black */}
         {/* Hreflang tags for SEO */}
         <link rel="alternate" hrefLang="id-ID" href="https://artistlive.id/" />

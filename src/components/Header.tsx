@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Navigation from './Navigation';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './ui/Logo';
 
 interface HeaderProps {
   locale: string;
@@ -64,18 +65,13 @@ const Header: React.FC<HeaderProps> = ({ locale, translations }) => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href={`/${locale}`} className="group">
-              <motion.div
-                className="flex items-center space-x-3"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <div className="text-2xl">🎵</div>
-                <span className="text-xl md:text-2xl font-display font-medium text-cream-50 group-hover:text-brass-900 transition-colors duration-300">
-                  ArtistLive.id
-                </span>
-              </motion.div>
-            </Link>
+            <Logo 
+              locale={locale} 
+              variant="white" 
+              size="sm" 
+              href={`/${locale}`}
+              showText={false}
+            />
 
             {/* Desktop Navigation & Language Switcher */}
             <div className="hidden md:flex items-center space-x-6">

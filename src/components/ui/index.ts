@@ -43,4 +43,5 @@ export type { MagicCardProps } from './magic-card';
 // Phase 3 Premium Components
 export { Dock, DockIcon } from './dock';
 export { EnhancedCard } from './enhanced-card';
-export { PremiumFooter } from './premium-footer'; 
+export { PremiumFooter } from './premium-footer';
+export { default as Logo } from './Logo'; 
