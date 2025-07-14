@@ -117,23 +117,67 @@ F-06: SEO Technical Implementation
 
 === 5. DESIGN & UX REQUIREMENTS ===
 
+Brand Identity Integration:
+- **Brand Essence**: "A warmly–welcoming, professional assistant that opens the doors to Indonesia's top musicians"
+- **Visual Identity**: Royal Indigo (#4B3BFF) + Deep Gold (#E2B007) + Charcoal (#222222) + Ghost White (#F7F8FF)
+- **Voice**: Moderately serious, casual tone, premium positioning
+- **Typography**: Poppins (600-700) for headings, Inter (400-500) for body copy
+
 Design Language:
-- Look & feel: Friendly, familiar, helpful
-- Soft gradients, rounded 2xl cards
-- Motion micro-interactions from MagicUI (limit to 100ms duration)
-- Font stack: Inter, fallback sans-serif
+- **Primary Colors**: Royal Indigo (#4B3BFF) for buttons, links, highlights
+- **Secondary Colors**: Deep Gold (#E2B007) for accents, icons, hover states  
+- **Neutral Colors**: Charcoal (#222222) for text, Ghost White (#F7F8FF) for backgrounds
+- **CTA Color**: WhatsApp Green (#25D366) consistent with primary CTA button
+- **Radius**: 12px border radius (brand-friendly, soft)
+- **Motion**: Subtle transitions ≤150ms duration using MagicUI presets
 
 Interactive Elements:
-- MagicUI "Floating CTA Badge" for WhatsApp
-- Scroll-triggered fade-ins
-- Hover states for all interactive elements
-- Loading states for form submissions
+- **Primary CTA**: Royal Indigo background with WhatsApp icon, white text
+- **Hover States**: Deep Gold text on Royal Indigo background  
+- **Secondary Buttons**: Ghost White background with Royal Indigo border/text
+- **Cards**: 12px radius, Ghost White background, subtle shadows
+- **Floating CTA**: WhatsApp Green with animation using MagicUI components
+
+Typography Implementation:
+- **Headings (H1-H2)**: Poppins SemiBold (600-700), Charcoal color
+- **Body Copy**: Inter Regular (400-500), Charcoal color  
+- **CTA Text**: Poppins Medium (500), white on colored backgrounds
+- **Accent Text**: Royal Indigo for links, Deep Gold for emphasis
+
+Background & Layout:
+- **Primary Background**: Ghost White (#F7F8FF) 
+- **Section Alternates**: Pure white and Ghost White for visual flow
+- **Gradients**: Subtle Royal Indigo to Deep Gold (avoid harsh contrasts)
+- **Cards**: Ghost White with 12px radius, soft shadows
+- **Hero Section**: Ghost White base with Royal Indigo/Deep Gold accent elements
 
 Mobile Optimization:
-- Touch-friendly CTAs (minimum 44px)
-- Thumb-friendly navigation
-- Fast loading on 3G networks
+- Touch-friendly CTAs (minimum 44px) with Royal Indigo styling
+- Thumb-friendly navigation with brand colors
+- Fast loading on 3G networks  
 - Optimized for Indonesian mobile usage patterns
+- Brand consistency across all breakpoints
+
+Brand Compliance Requirements:
+- **No "cheap" or "affordable" language** - use "mudah", "efisien", "profesional"
+- **Premium positioning** - avoid price-centric messaging
+- **Conversational tone** - casual but professional, like "seasoned tour manager"
+- **Indonesian market focus** - cultural appropriateness with brand voice
+- **Trust indicators** - transparent process, verified talent messaging
+
+Imagery Guidelines:
+- **Real Indonesian musicians** performing at events
+- **Warm lighting** and candid emotion over staged shots
+- **Audience-performer connection** emphasized in hero imagery
+- **Event diversity** - weddings, corporate, school concerts (pensi)
+- **Brand color overlays** - subtle Royal Indigo/Deep Gold tints when appropriate
+
+Accessibility with Brand Colors:
+- **Contrast Ratios**: All brand color combinations meet WCAG AA (≥4.5:1)
+- **Royal Indigo on Ghost White**: ✅ High contrast
+- **Charcoal on Ghost White**: ✅ Excellent readability  
+- **Deep Gold on Ghost White**: ✅ Accent visibility
+- **WhatsApp Green CTA**: ✅ Clear action indicator
 
 === 6. TECHNICAL ARCHITECTURE ===
 

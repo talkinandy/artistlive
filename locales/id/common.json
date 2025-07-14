@@ -1,0 +1,112 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "services": "Layanan",
+    "portfolio": "Portofolio",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "booking": "Booking"
+  },
+  "hero": {
+    "headline": "Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia",
+    "subheadline": "Platform terpercaya untuk booking band, penyanyi, dan musisi profesional. Booking mudah, kualitas terjamin, harga transparan untuk semua jenis acara di seluruh Indonesia.",
+    "ctaPrimary": "Booking Sekarang via WhatsApp",
+    "whatsappMessage": "Halo! Saya tertarik untuk booking band/penyanyi untuk acara saya di {location} sekitar {time}. Bisa dibantu informasinya?",
+    "locationLabel": "Di mana acara Anda?",
+    "locationPlaceholder": "Jakarta",
+    "timeLabel": "Kapan acara Anda?",
+    "timePlaceholder": "bulan depan",
+    "trustIndicators": {
+      "instant": "Booking Instan",
+      "professional": "Musisi Profesional",
+      "guarantee": "Garansi Kualitas"
+    }
+  },
+  "artists": {
+    "title": "Artis Unggulan",
+    "subtitle": "Temui beberapa musisi berbakat kami yang sudah melayani klien di seluruh Indonesia",
+    "joinText": "dan 500+ artis profesional lainnya",
+    "placeholder": {
+      "name": "Nama Artis",
+      "genre": "Genre",
+      "location": "Lokasi"
+    }
+  },
+  "services": {
+    "title": "Layanan Kami",
+    "subtitle": "Temukan musisi terbaik untuk setiap jenis acara",
+    "wedding": {
+      "title": "Band Pernikahan",
+      "description": "Sewa band untuk acara pernikahan dan resepsi dengan repertoir lagu romantis"
+    },
+    "corporate": {
+      "title": "Musik Acara Kantor",
+      "description": "Live music profesional untuk corporate event dan gathering perusahaan"
+    },
+    "school": {
+      "title": "Band Pensi & Sekolah",
+      "description": "Band untuk acara sekolah, pensi, dan event kampus dengan energi tinggi"
+    },
+    "solo": {
+      "title": "Penyanyi Solo",
+      "description": "Booking penyanyi solo profesional untuk acara intimate dan private event"
+    }
+  },
+  "features": {
+    "title": "Mengapa Pilih ArtistLive.id?",
+    "verified": {
+      "title": "Musisi Terverifikasi",
+      "description": "Semua talent sudah melalui proses seleksi dan verifikasi kualitas"
+    },
+    "instant": {
+      "title": "Booking Instan",
+      "description": "Proses booking cepat melalui WhatsApp dalam hitungan detik"
+    },
+    "transparent": {
+      "title": "Harga Transparan",
+      "description": "Tidak ada biaya tersembunyi, semua harga sudah termasuk PPN"
+    },
+    "support": {
+      "title": "Dukungan 24/7",
+      "description": "Tim customer service siap membantu kapan saja"
+    }
+  },
+  "footer": {
+    "description": "Platform booking live music terpercaya untuk semua acara di Indonesia",
+    "rights": "Built with ❤️ for the Indonesian music community.",
+    "quickLinks": "Link Cepat",
+    "services": "Layanan",
+    "support": "Dukungan",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat & Ketentuan",
+    "faq": "FAQ",
+    "help": "Bantuan"
+  },
+  "common": {
+    "learnMore": "Pelajari Lebih Lanjut",
+    "getStarted": "Mulai Sekarang",
+    "contactUs": "Hubungi Kami",
+    "readMore": "Baca Selengkapnya",
+    "viewAll": "Lihat Semua",
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "success": "Berhasil",
+    "close": "Tutup",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "previous": "Sebelumnya",
+    "search": "Cari",
+    "filter": "Filter",
+    "sort": "Urutkan",
+    "share": "Bagikan",
+    "copy": "Salin",
+    "download": "Unduh",
+    "upload": "Unggah",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "confirm": "Konfirmasi",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "update": "Perbarui"
+  }
+} 

@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ArtistLive.id Brand Variables (Official Brand Identity) */
+    --brand-primary: 249 59% 63%; /* #4B3BFF - Royal Indigo */
+    --brand-secondary: 45 94% 47%; /* #E2B007 - Deep Gold */
+    --brand-charcoal: 0 0% 13%; /* #222222 - Charcoal */
+    --brand-ghost: 233 100% 98%; /* #F7F8FF - Ghost White */
+    --brand-whatsapp: 145 63% 49%; /* #25D366 - WhatsApp Green */
+    
+    /* System Variables (shadcn/ui compatible) */
+    --background: 233 100% 98%; /* Ghost White */
+    --foreground: 0 0% 13%; /* Charcoal */
+    --card: 233 100% 98%; /* Ghost White */
+    --card-foreground: 0 0% 13%; /* Charcoal */
+    --popover: 233 100% 98%; /* Ghost White */
+    --popover-foreground: 0 0% 13%; /* Charcoal */
+    --primary: var(--brand-primary); /* Royal Indigo */
+    --primary-foreground: 233 100% 98%; /* White on Royal Indigo */
+    --secondary: var(--brand-secondary); /* Deep Gold */
+    --secondary-foreground: 0 0% 13%; /* Charcoal on Gold */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: var(--brand-secondary); /* Deep Gold */
+    --accent-foreground: 0 0% 13%; /* Charcoal */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--brand-primary); /* Royal Indigo */
+    --radius: 0.75rem; /* 12px - Brand Identity */
+    
+    /* Design System Variables */
+    --radius-brand: 12px; /* Brand Identity card radius */
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 20px rgba(75, 59, 255, 0.3); /* Royal Indigo glow */
+    --transition-fast: 100ms ease-out; /* Brand: ≤ 150ms */
+    --transition-smooth: 150ms ease-out; /* Brand: ≤ 150ms */
+  }
+
+  .dark {
+    /* Dark mode maintains brand identity */
+    --brand-primary: 249 59% 63%; /* Keep Royal Indigo consistent */
+    --brand-secondary: 45 94% 47%; /* Keep Deep Gold consistent */
+    --brand-charcoal: 0 0% 13%;
+    --brand-ghost: 233 100% 98%;
+    --brand-whatsapp: 145 63% 49%;
+    
+    --background: 0 0% 13%; /* Charcoal background */
+    --foreground: 233 100% 98%; /* Ghost White text */
+    --card: 0 0% 13%; /* Charcoal cards */
+    --card-foreground: 233 100% 98%; /* Ghost White text */
+    --popover: 0 0% 13%;
+    --popover-foreground: 233 100% 98%;
+    --primary: var(--brand-primary);
+    --primary-foreground: 0 0% 13%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: var(--brand-primary);
+    
+    /* Dark mode design system adjustments */
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 20px rgba(75, 59, 255, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    scroll-behavior: smooth;
+  }
+}
+
+/* ArtistLive.id Design System Components - Brand Identity Aligned */
+@layer components {
+  /* Brand Gradients */
+  .gradient-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #b8860b 100%); /* Midnight Black to Warm Brass */
+  }
+  
+  .gradient-brand {
+    background: linear-gradient(135deg, #0a0a0a 0%, #b8860b 50%, #0a0a0a 100%); /* Premium brand colors */
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(90deg, #b8860b 0%, #25D366 100%); /* Warm Brass to WhatsApp */
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-brass-900 to-cream-50 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-brand {
+    @apply bg-gradient-to-r from-brass-900 to-midnight-950 bg-clip-text text-transparent;
+  }
+  
+  /* Shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-brand {
+    box-shadow: 0 10px 40px -10px rgba(75, 59, 255, 0.3); /* Royal Indigo shadow */
+  }
+  
+  /* Interactive States - Brand Identity: ≤ 150ms */
+  .interactive {
+    transition: all var(--transition-smooth);
+  }
+  
+  .interactive:hover {
+    @apply transform scale-105;
+  }
+  
+  .micro-interaction {
+    transition: all var(--transition-fast);
+  }
+  
+  .micro-interaction:hover {
+    @apply animate-micro-scale;
+  }
+  
+  /* Button Variants - Brand Identity Aligned */
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-display font-display rounded-brand shadow-soft transition-all duration-150 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 bg-white hover:bg-ghost text-charcoal-900 font-display font-display rounded-brand shadow-soft border border-gray-200 transition-all duration-150;
+  }
+  
+  .btn-cta {
+    /* Brand Identity: Royal Indigo background, WhatsApp icon, white text */
+    @apply inline-flex items-center px-8 py-4 bg-brand-500 hover:text-gold-500 text-white font-display font-display rounded-brand shadow-soft transition-all duration-150 transform hover:scale-105;
+  }
+  
+  .btn-whatsapp {
+    @apply inline-flex items-center px-8 py-4 bg-whatsapp hover:bg-green-700 text-white font-display font-display rounded-brand shadow-soft transition-all duration-150 transform hover:scale-105;
+  }
+  
+  /* Card Variants - Brand Identity: 12px radius */
+  .card-soft {
+    @apply bg-white rounded-brand shadow-soft border border-gray-100 p-6;
+  }
+  
+  .card-brand {
+    @apply bg-ghost rounded-brand shadow-soft border border-brand-200 p-6;
+  }
+  
+  .card-glow {
+    @apply bg-white rounded-brand shadow-glow border border-brand-200 p-6;
+  }
+  
+  /* Typography - Brand Identity: Poppins for display, Inter for body */
+  .heading-1 {
+    @apply text-4xl md:text-6xl font-display font-bold text-gray-900 leading-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-display font-semibold text-gray-900 leading-tight;
+  }
+  
+  .heading-3 {
+    @apply text-xl md:text-2xl font-display font-medium text-gray-900;
+  }
+  
+  .body-large {
+    @apply text-xl md:text-2xl font-sans font-body text-gray-600 leading-relaxed;
+  }
+  
+  .body-text {
+    @apply text-base font-sans font-body text-gray-600 leading-relaxed;
+  }
+} 

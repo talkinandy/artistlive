@@ -1,0 +1,112 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "booking": "Booking"
+  },
+  "hero": {
+    "headline": "Book Live Bands & Singers for All Events in Indonesia",
+    "subheadline": "Trusted platform for booking bands, singers, and professional musicians. Easy booking, guaranteed quality, transparent pricing for all types of events across Indonesia.",
+    "ctaPrimary": "Book Now via WhatsApp",
+    "whatsappMessage": "Hello! I'm interested in booking a band/singer for my event in {location} around {time}. Can you help me with the information?",
+    "locationLabel": "Where is your event?",
+    "locationPlaceholder": "Jakarta",
+    "timeLabel": "When is your event?",
+    "timePlaceholder": "next month",
+    "trustIndicators": {
+      "instant": "Instant Booking",
+      "professional": "Professional Musicians", 
+      "guarantee": "Quality Guarantee"
+    }
+  },
+  "artists": {
+    "title": "Featured Artists",
+    "subtitle": "Meet some of our talented musicians already serving clients across Indonesia",
+    "joinText": "and 500+ more professional artists",
+    "placeholder": {
+      "name": "Artist Name",
+      "genre": "Genre",
+      "location": "Location"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Find the best musicians for every type of event",
+    "wedding": {
+      "title": "Wedding Bands",
+      "description": "Hire bands for wedding ceremonies and receptions with romantic song repertoires"
+    },
+    "corporate": {
+      "title": "Corporate Event Music",
+      "description": "Professional live music for corporate events and company gatherings"
+    },
+    "school": {
+      "title": "School & Campus Events",
+      "description": "High-energy bands for school events, graduations, and campus celebrations"
+    },
+    "solo": {
+      "title": "Solo Singers",
+      "description": "Book professional solo singers for intimate and private events"
+    }
+  },
+  "features": {
+    "title": "Why Choose ArtistLive.id?",
+    "verified": {
+      "title": "Verified Musicians",
+      "description": "All talent has been through our quality selection and verification process"
+    },
+    "instant": {
+      "title": "Instant Booking",
+      "description": "Quick booking process via WhatsApp in just seconds"
+    },
+    "transparent": {
+      "title": "Transparent Pricing",
+      "description": "No hidden fees, all prices include VAT"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Customer service team ready to help anytime"
+    }
+  },
+  "footer": {
+    "description": "Trusted live music booking platform for all events in Indonesia",
+    "rights": "Built with ❤️ for the Indonesian music community.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "support": "Support",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "faq": "FAQ",
+    "help": "Help"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "share": "Share",
+    "copy": "Copy",
+    "download": "Download",
+    "upload": "Upload",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "update": "Update"
+  }
+} 
