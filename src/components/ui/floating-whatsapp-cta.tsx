@@ -18,21 +18,24 @@ const FloatingWhatsAppCTA: React.FC<FloatingWhatsAppCTAProps> = ({ content, loca
   const heroCtaRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    // Find the hero CTA button by its specific ID
-    const findHeroCTA = () => {
-      const ctaButton = document.getElementById('hero-whatsapp-cta');
+    // Find the CTA button by its specific ID (hero or about page)
+    const findCTA = () => {
+      const heroCta = document.getElementById('hero-whatsapp-cta');
+      const aboutCta = document.querySelector('[data-cta="about-whatsapp"]');
+      
+      const ctaButton = heroCta || aboutCta;
       if (ctaButton) {
-        heroCtaRef.current = ctaButton;
+        heroCtaRef.current = ctaButton as HTMLElement;
         return true;
       }
       return false;
     };
 
     // Try to find the CTA immediately, if not found, try again with increasing delays
-    if (!findHeroCTA()) {
+    if (!findCTA()) {
       const timeout1 = setTimeout(() => {
-        if (!findHeroCTA()) {
-          setTimeout(findHeroCTA, 500);
+        if (!findCTA()) {
+          setTimeout(findCTA, 500);
         }
       }, 100);
       return () => clearTimeout(timeout1);

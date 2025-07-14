@@ -108,5 +108,72 @@
     "delete": "Hapus",
     "edit": "Edit",
     "update": "Perbarui"
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "subtitle": "Menghubungkan talenta terbaik dengan acara istimewa Anda",
+    "mission": {
+      "title": "Misi Kami",
+      "description": "Memberdayakan artis dan menyederhanakan perencanaan acara melalui teknologi inovatif, membuat koneksi menjadi mudah dan peluang dapat diakses oleh semua orang."
+    },
+    "vision": {
+      "title": "Visi Kami",
+      "description": "Menjadi platform booking artis terdepan di Asia yang menggabungkan teknologi AI dengan layanan premium untuk pengalaman booking yang tak tertandingi."
+    },
+    "story": {
+      "title": "Cerita Kami",
+      "description": "Proses booking artis tradisional tidak efisien. Miskomunikasi menunda booking, sistem pembayaran yang terfragmentasi menciptakan ketidakpastian. ArtistLive.id diciptakan untuk mengatasi tantangan ini dengan memanfaatkan teknologi AI untuk menyederhanakan booking artis."
+    },
+    "values": {
+      "title": "Nilai-Nilai Kami",
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Teknologi AI terdepan untuk pengalaman booking yang seamless"
+      },
+      "security": {
+        "title": "Keamanan",
+        "description": "Sistem escrow wajib & ID terverifikasi untuk transaksi aman"
+      },
+      "simplicity": {
+        "title": "Kesederhanaan",
+        "description": "Pengalaman pengguna yang intuitif dan mudah digunakan"
+      },
+      "reliability": {
+        "title": "Keandalan",
+        "description": "Layanan konsisten dengan tingkat keberhasilan 99.8%"
+      }
+    },
+    "services": {
+      "title": "Layanan Kami",
+      "for_bookers": {
+        "title": "Untuk Event Organizer",
+        "discovery": "Pencarian artis berdasarkan nama, genre, lokasi, dan ketersediaan",
+        "support": "Dukungan WhatsApp instan melalui AI agent",
+        "booking": "Proses booking yang efisien dan terintegrasi",
+        "payment": "Sistem pembayaran escrow yang aman"
+      },
+      "for_artists": {
+        "title": "Untuk Artis",
+        "visibility": "Platform untuk visibilitas dan listing profesional",
+        "communication": "Komunikasi WhatsApp melalui AI agent",
+        "management": "Manajemen permintaan booking yang mudah",
+        "protection": "Perlindungan pembayaran yang terjamin"
+      }
+    },
+    "why_choose": {
+      "title": "Mengapa Memilih Kami",
+      "efficiency": "Booking berbasis WhatsApp dengan respons AI instan",
+      "security": "Transaksi aman dan terlindungi dengan escrow",
+      "simplicity": "Mengurangi waktu administratif hingga 15 jam per booking",
+      "reliability": "Tingkat keberhasilan pembayaran 99.8%"
+    },
+    "stats": {
+      "response_time": "< 3 menit",
+      "response_label": "Rata-rata waktu respons proposal",
+      "success_rate": "99.8%",
+      "success_label": "Tingkat keberhasilan pembayaran",
+      "time_saved": "15 jam",
+      "time_saved_label": "Waktu admin yang dihemat per booking"
+    }
   }
 } 

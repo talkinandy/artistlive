@@ -108,5 +108,72 @@
     "delete": "Delete",
     "edit": "Edit",
     "update": "Update"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Connecting Indonesia's finest talents with your special events",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower artists and simplify event planning through innovative technology, making connections seamless and opportunities accessible for everyone."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become Asia's leading artist booking platform that combines AI technology with premium service for an unmatched booking experience."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "The traditional artist booking process is broken. Miscommunication delays bookings, fragmented payment systems create uncertainty. ArtistLive.id was created to solve these challenges by leveraging AI technology to simplify artist bookings."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Cutting-edge AI technology for seamless booking experience"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Mandatory escrow system & verified IDs for secure transactions"
+      },
+      "simplicity": {
+        "title": "Simplicity",
+        "description": "Intuitive user experience that's easy to use"
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Consistent service with 99.8% success rate"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "for_bookers": {
+        "title": "For Event Organizers",
+        "discovery": "Artist discovery by name, genre, location, and availability",
+        "support": "Instant WhatsApp support via AI agent",
+        "booking": "Streamlined and integrated booking process",
+        "payment": "Secure escrow payment system"
+      },
+      "for_artists": {
+        "title": "For Artists",
+        "visibility": "Platform for professional visibility and listing",
+        "communication": "WhatsApp communication via AI agent",
+        "management": "Easy booking request management",
+        "protection": "Guaranteed payment protection"
+      }
+    },
+    "why_choose": {
+      "title": "Why Choose Us",
+      "efficiency": "WhatsApp-based booking with instant AI responses",
+      "security": "Safe and protected transactions with escrow",
+      "simplicity": "Reduce administrative time by up to 15 hours per booking",
+      "reliability": "99.8% successful payout rate"
+    },
+    "stats": {
+      "response_time": "< 3 min",
+      "response_label": "Average rate proposal time",
+      "success_rate": "99.8%",
+      "success_label": "Successful payout rate",
+      "time_saved": "15 hours",
+      "time_saved_label": "Admin time saved per booking"
+    }
   }
 } 

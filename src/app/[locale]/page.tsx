@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import Header from '@/components/Header';
 import { Hero } from '@/components/sections/Hero';
 import Artists from '@/components/sections/Artists';
 import Services from '@/components/sections/Services';
@@ -37,10 +37,8 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <main className="min-h-screen">
-      {/* Language Switcher - positioned absolutely in top right */}
-      <div className="absolute top-6 right-6 z-50">
-        <LanguageSwitcher currentLocale={locale} />
-      </div>
+      {/* Header with Navigation */}
+      <Header locale={locale} translations={t} />
       
       {/* Hero Section */}
       <section id="hero">
