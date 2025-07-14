@@ -79,33 +79,45 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
   ];
 
   return (
-    <section className="py-24 bg-midnight-900 relative overflow-hidden">
-      {/* Subtle texture overlay */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="w-full h-full bg-gradient-to-t from-midnight-950 via-transparent to-midnight-950"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
-        {/* Section Header */}
-        <BlurFade delay={0.2}>
-          <div className="text-center mb-16">
+    <section className="relative bg-midnight-900 overflow-hidden">
+      {/* Header with Background Image */}
+      <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
+        <img 
+          src="/images/band-performance.jpg" 
+          alt="Live band performance"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight-950/50 via-midnight-950/70 to-midnight-950"></div>
+        
+        {/* Header Content */}
+        <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+          <BlurFade delay={0.2}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <H2 className="mb-4 text-cream-50 font-display font-normal">
+              <H2 className="mb-4 text-cream-50 font-display font-normal text-4xl md:text-5xl lg:text-6xl">
                 {content.title}
               </H2>
-              <p className="text-cream-50/70 text-xl max-w-2xl mx-auto font-body font-light">
+              <p className="text-cream-50/80 text-xl md:text-2xl max-w-3xl mx-auto font-body font-light">
                 {content.subtitle}
               </p>
             </motion.div>
-          </div>
-        </BlurFade>
-
-        {/* Artists Grid */}
+          </BlurFade>
+        </div>
+      </div>
+      
+      {/* Artists Grid Section */}
+      <div className="py-24 relative">
+        {/* Subtle texture overlay */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-t from-midnight-950 via-transparent to-midnight-950"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          {/* Artists Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {featuredArtists.map((artist, index) => (
             <BlurFade key={artist.id} delay={0.3 + index * 0.1}>
@@ -172,20 +184,21 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
           ))}
         </div>
 
-        {/* Join Text */}
-        <BlurFade delay={0.8}>
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <p className="text-cream-50/70 font-body text-lg">
-              {content.joinText}
-            </p>
-          </motion.div>
-        </BlurFade>
+          {/* Join Text */}
+          <BlurFade delay={0.8}>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <p className="text-cream-50/70 font-body text-lg">
+                {content.joinText}
+              </p>
+            </motion.div>
+          </BlurFade>
+        </div>
       </div>
     </section>
   );

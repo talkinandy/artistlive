@@ -30,9 +30,20 @@ export function Hero({ content, locale }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-midnight-950">
+    <section className="relative min-h-screen flex items-center justify-center bg-midnight-950 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/images/concert-hero.jpg" 
+          alt="Live concert performance"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight-950/70 via-midnight-950/85 to-midnight-950"></div>
+      </div>
+      
       {/* Subtle grain texture overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-[1]">
         <div className="w-full h-full bg-gradient-to-br from-brass-900/5 via-transparent to-brass-900/5"></div>
       </div>
       
