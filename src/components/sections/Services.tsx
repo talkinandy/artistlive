@@ -30,25 +30,25 @@ interface ServicesProps {
 const Services: React.FC<ServicesProps> = ({ content }) => {
   const services = [
     {
-      icon: "💒",
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&h=300&fit=crop&auto=format",
       title: content.wedding.title,
       description: content.wedding.description,
       accent: "from-brass-900/20 to-brass-900/10"
     },
     {
-      icon: "🏢", 
+      image: "https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=400&h=300&fit=crop&auto=format",
       title: content.corporate.title,
       description: content.corporate.description,
       accent: "from-brass-900/15 to-brass-900/5"
     },
     {
-      icon: "🎓",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop&auto=format",
       title: content.school.title,
       description: content.school.description,
       accent: "from-brass-900/10 to-transparent"
     },
     {
-      icon: "🎤",
+      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=300&fit=crop&auto=format",
       title: content.solo.title,
       description: content.solo.description,
       accent: "from-brass-900/25 to-brass-900/5"
@@ -89,13 +89,17 @@ const Services: React.FC<ServicesProps> = ({ content }) => {
                 gradientOpacity={0.06}
               >
                 <div className="p-6 md:p-8 h-full bg-cream-50/90 backdrop-blur-sm rounded-brand border border-brass-900/10 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/20 hover:shadow-xl">
-                  {/* Service content */}
+                  {/* Service image */}
                   <motion.div 
-                    className="text-4xl mb-6 w-16 h-16 bg-gradient-to-br from-brass-900/10 to-brass-900/20 rounded-brand flex items-center justify-center shadow-sm border border-brass-900/20 group-hover:shadow-lg transition-all duration-300"
-                    whileHover={{ scale: 1.05, rotate: 2 }}
+                    className="mb-6 w-full h-48 rounded-brand overflow-hidden shadow-sm border border-brass-900/20 group-hover:shadow-lg transition-all duration-300"
+                    whileHover={{ scale: 1.02 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    {service.icon}
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </motion.div>
                   
                   <h3 className="text-xl font-display font-medium text-midnight-950 mb-4 group-hover:text-brass-900 transition-colors duration-300">

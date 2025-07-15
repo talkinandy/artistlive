@@ -159,6 +159,8 @@ module.exports = {
         slide: "slide var(--speed) ease-in-out infinite alternate",
         "spin-around": "spin-around calc(var(--speed)*2) infinite linear",
         float: "float 6s ease-in-out infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       keyframes: {
         "fade-up": {
@@ -315,6 +317,14 @@ module.exports = {
             transform: "translate3d(-20px, 20px, 0) rotateZ(240deg)",
             opacity: "1",
           },
+        },
+        marquee: {
+          from: { transform: "translateX(0%)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0%)" },
+          to: { transform: "translateY(-100%)" },
         },
       },
       boxShadow: {
