@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
           url: '/images/logo/with_padding.png',
           width: 1200,
           height: 630,
-          alt: 'ArtistLive.id - Live Music Booking Platform',
+          alt: 'ArtistLive.id - Book Celebrity Artists, Live Bands & Solo Musicians for Concerts',
         },
       ],
     },
