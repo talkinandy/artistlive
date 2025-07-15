@@ -29,36 +29,36 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const metadata = {
     id: {
       title: {
-        default: 'ArtistLive.id - Sewa Band & Penyanyi Live untuk Acara',
+        default: 'ArtistLive.id - Book Band Terkenal, Penyanyi Solo & Selebritis untuk Konser',
         template: '%s | ArtistLive.id',
       },
-      description: 'Platform booking live musicians dan penyanyi untuk acara pernikahan, kantor, dan event di Indonesia. Book live talent in seconds.',
-      keywords: ['sewa band', 'sewa band pernikahan', 'sewa band Jakarta', 'booking penyanyi', 'live music', 'band acara kantor'],
+      description: 'Platform terpercaya untuk booking band terkenal, penyanyi solo, dan selebritis untuk konser dan semua acara. Musisi profesional seperti Indra Lesmana, Titi DJ, Andien tersedia.',
+      keywords: ['book band terkenal', 'sewa penyanyi solo', 'booking selebritis', 'konser', 'Indra Lesmana', 'Titi DJ', 'Andien', 'Andra and The Backbone', 'Balawan', 'musisi profesional'],
       openGraph: {
-        title: 'ArtistLive.id - Sewa Band & Penyanyi Live untuk Acara',
-        description: 'Platform booking live musicians dan penyanyi untuk acara pernikahan, kantor, dan event di Indonesia.',
+        title: 'ArtistLive.id - Book Band Terkenal, Penyanyi Solo & Selebritis untuk Konser',
+        description: 'Platform terpercaya untuk booking band terkenal, penyanyi solo, dan selebritis untuk konser dan semua acara. Musisi profesional tersedia.',
         locale: 'id_ID',
       },
       twitter: {
-        title: 'ArtistLive.id - Sewa Band & Penyanyi Live untuk Acara',
-        description: 'Platform booking live musicians dan penyanyi untuk acara pernikahan, kantor, dan event di Indonesia.',
+        title: 'ArtistLive.id - Book Band Terkenal, Penyanyi Solo & Selebritis untuk Konser',
+        description: 'Platform terpercaya untuk booking band terkenal, penyanyi solo, dan selebritis untuk konser dan semua acara.',
       },
     },
     en: {
       title: {
-        default: 'ArtistLive.id - Book Live Bands & Singers for Events',
+        default: 'ArtistLive.id - Book Live Bands, Solo Musicians & Celebrities for Concerts',
         template: '%s | ArtistLive.id',
       },
-      description: 'Live music booking platform for weddings, corporate events, and parties in Indonesia. Professional musicians and singers available.',
-      keywords: ['book live band', 'wedding musicians', 'corporate entertainment', 'live music booking', 'Indonesia events', 'professional singers'],
+      description: 'Trusted platform for booking live bands, solo musicians, and celebrities for concerts and all events. Professional artists like Indra Lesmana, Titi DJ, Andien available.',
+      keywords: ['book live band', 'solo musicians', 'celebrity booking', 'concerts', 'Indra Lesmana', 'Titi DJ', 'Andien', 'Indonesian artists', 'professional musicians', 'event entertainment'],
       openGraph: {
-        title: 'ArtistLive.id - Book Live Bands & Singers for Events',
-        description: 'Live music booking platform for weddings, corporate events, and parties in Indonesia. Professional musicians and singers available.',
+        title: 'ArtistLive.id - Book Live Bands, Solo Musicians & Celebrities for Concerts',
+        description: 'Trusted platform for booking live bands, solo musicians, and celebrities for concerts and all events. Professional artists available.',
         locale: 'en_US',
       },
       twitter: {
-        title: 'ArtistLive.id - Book Live Bands & Singers for Events',
-        description: 'Live music booking platform for weddings, corporate events, and parties in Indonesia. Professional musicians and singers available.',
+        title: 'ArtistLive.id - Book Live Bands, Solo Musicians & Celebrities for Concerts',
+        description: 'Trusted platform for booking live bands, solo musicians, and celebrities for concerts and all events.',
       },
     },
   };
