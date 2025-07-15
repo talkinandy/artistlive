@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia',
+  title: 'Book Artis & Penyanyi Live untuk Konser & Semua Acara di Indonesia',
   description: 'Book live talent in seconds. Sewa band pernikahan, band acara kantor, penyanyi solo untuk semua acara di Jakarta, Bandung, Surabaya.',
   keywords: ['sewa band', 'sewa band pernikahan', 'sewa band Jakarta', 'booking penyanyi solo', 'band acara kantor', 'jasa live music'],
   openGraph: {
-    title: 'Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia',
+    title: ' Band & Penyanyi Live untuk Semua Acara di Indonesia',
     description: 'Book live talent in seconds. Platform terpercaya untuk booking live musicians dan penyanyi profesional.',
     type: 'website',
   },
