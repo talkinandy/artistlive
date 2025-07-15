@@ -392,12 +392,12 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
               >
                 <ShimmerButton 
                   data-cta="about-whatsapp"
-                  className="relative px-8 py-4 bg-whatsapp text-white font-body font-medium text-lg rounded-brand border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group"
-                  shimmerColor="#25D366"
+                  className="relative px-8 py-4 bg-midnight-950 text-brass-900 font-body font-medium text-lg rounded-brand border border-brass-900/20 shadow-xl hover:shadow-2xl hover:bg-brass-900 hover:text-midnight-950 transition-all duration-300 group"
+                  shimmerColor="#b8860b"
                   shimmerSize="0.05em"
                   borderRadius="12px"
                   shimmerDuration="2s"
-                  background="#25D366"
+                  background="#0a0a0a"
                   onClick={handleWhatsAppClick}
                 >
                   <span className="relative z-10 flex items-center gap-3 justify-center">

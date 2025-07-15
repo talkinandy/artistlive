@@ -61,27 +61,6 @@ const PremiumFooter = React.forwardRef<HTMLDivElement, PremiumFooterProps>(
               Bringing celebrity-level talent to your events with sophisticated booking experience
             </motion.p>
 
-            {/* Features */}
-            <motion.div
-              className="flex flex-wrap justify-center gap-8 text-sm"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <span className="flex items-center gap-2 text-cream-50/60">
-                <span className="w-2 h-2 bg-brass-900 rounded-full"></span>
-                <span className="font-body">Live Booking</span>
-              </span>
-              <span className="flex items-center gap-2 text-cream-50/60">
-                <span className="w-2 h-2 bg-brass-900 rounded-full"></span>
-                <span className="font-body">Verified Artists</span>
-              </span>
-              <span className="flex items-center gap-2 text-cream-50/60">
-                <span className="w-2 h-2 bg-brass-900 rounded-full"></span>
-                <span className="font-body">Premium Quality</span>
-              </span>
-            </motion.div>
 
             {/* Copyright */}
             <motion.div

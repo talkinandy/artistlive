@@ -8,9 +8,10 @@
     "booking": "Booking"
   },
   "hero": {
-    "headline": "Sewa Band & Penyanyi Live untuk Semua Acara di Indonesia",
-    "subheadline": "Platform terpercaya untuk booking band, penyanyi, dan musisi profesional. Booking mudah, kualitas terjamin, harga transparan untuk semua jenis acara di seluruh Indonesia.",
-    "ctaPrimary": "Booking Sekarang via WhatsApp",
+    "headline": "Book\n{morphing}\nuntuk Konser & Semua Acara",
+    "morphingWords": ["Band Terkenal", "Penyanyi Solo", "Selebritis"],
+    "subheadline": "Platform terpercaya untuk booking band, penyanyi, dan musisi profesional.",
+    "ctaPrimary": "Book Sekarang via WhatsApp",
     "whatsappMessage": "Halo! Saya tertarik untuk booking band/penyanyi untuk acara saya di {location} sekitar {time}. Bisa dibantu informasinya?",
     "locationLabel": "Di mana acara Anda?",
     "locationPlaceholder": "Jakarta",
@@ -24,12 +25,11 @@
   },
   "artists": {
     "title": "Artis Unggulan",
-    "subtitle": "Temui beberapa musisi berbakat kami yang sudah melayani klien di seluruh Indonesia",
-    "joinText": "dan 500+ artis profesional lainnya",
+    "subtitle": "Temui para musisi yang telah bergabung dengan kami",
+    "joinText": "dan 100+ artis profesional lainnya",
     "placeholder": {
       "name": "Nama Artis",
-      "genre": "Genre",
-      "location": "Lokasi"
+      "genre": "Genre"
     }
   },
   "services": {

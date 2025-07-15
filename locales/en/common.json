@@ -8,8 +8,9 @@
     "booking": "Booking"
   },
   "hero": {
-    "headline": "Book Live Bands & Singers for All Events in Indonesia",
-    "subheadline": "Trusted platform for booking bands, singers, and professional musicians. Easy booking, guaranteed quality, transparent pricing for all types of events across Indonesia.",
+    "headline": "Book\n{morphing}\nfor Concert & All Events",
+    "morphingWords": ["Live Band", "Solo Musician", "Celebrities"],
+    "subheadline": "Trusted platform for booking bands, singers, and professional musicians.",
     "ctaPrimary": "Book Now via WhatsApp",
     "whatsappMessage": "Hello! I'm interested in booking a band/singer for my event in {location} around {time}. Can you help me with the information?",
     "locationLabel": "Where is your event?",
@@ -28,8 +29,7 @@
     "joinText": "and 500+ more professional artists",
     "placeholder": {
       "name": "Artist Name",
-      "genre": "Genre",
-      "location": "Location"
+      "genre": "Genre"
     }
   },
   "services": {

@@ -1,6 +1,7 @@
 'use client';
 
 import { ShimmerButton } from '@/components/ui/shimmer-button';
+import { MorphingText } from '@/components/magicui/morphing-text';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { createWhatsAppUrl, businessConfig } from '@/lib/config';
@@ -8,6 +9,7 @@ import { createWhatsAppUrl, businessConfig } from '@/lib/config';
 interface HeroProps {
   content: {
     headline: string;
+    morphingWords: string[];
     subheadline: string;
     ctaPrimary: string;
     whatsappMessage: string;
@@ -55,15 +57,15 @@ export function Hero({ content, locale }: HeroProps) {
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center">
         
-        {/* Premium Badge */}
+        {/* Premium Badge - Hidden but maintains space */}
         <motion.div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brass-900/20 bg-brass-900/5 backdrop-blur-sm mb-8 md:mb-12"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-transparent bg-transparent backdrop-blur-sm mb-8 md:mb-12 opacity-0"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 0, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="w-2 h-2 bg-brass-900 rounded-full"></span>
-          <span className="text-brass-900 font-body text-sm tracking-wide">
+          <span className="w-2 h-2 bg-transparent rounded-full"></span>
+          <span className="text-transparent font-body text-sm tracking-wide">
             {locale === 'id' ? 'Live Entertainment Premium' : 'Premium Live Entertainment'}
           </span>
         </motion.div>
@@ -76,7 +78,19 @@ export function Hero({ content, locale }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-normal text-cream-50 leading-[1.1] tracking-tight mb-6">
-            {content.headline}
+            {content.headline.split('\n').map((line, index) => {
+              if (line === '{morphing}') {
+                return (
+                  <span key={index} className="block">
+                    <MorphingText 
+                      words={content.morphingWords} 
+                      className="text-brass-900 font-bold"
+                    />
+                  </span>
+                );
+              }
+              return <span key={index} className="block">{line}</span>;
+            })}
           </h1>
           
           {/* Elegant underline accent */}
@@ -95,19 +109,19 @@ export function Hero({ content, locale }: HeroProps) {
 
         {/* Premium CTA Section */}
         <motion.div 
-          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-12 md:mb-16 px-2"
+          className="flex justify-center items-center mb-12 md:mb-16 px-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <ShimmerButton 
             id="hero-whatsapp-cta"
-            className="relative px-8 py-3 md:px-12 md:py-4 bg-whatsapp text-white font-body font-medium text-base md:text-lg rounded-brand border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group w-full sm:w-auto"
-            shimmerColor="#25D366"
+            className="relative px-8 py-3 md:px-12 md:py-4 bg-midnight-950 text-brass-900 font-body font-medium text-base md:text-lg rounded-brand border border-brass-900/20 shadow-xl hover:shadow-2xl hover:bg-brass-900 hover:text-midnight-950 transition-all duration-300 group w-full sm:w-auto"
+            shimmerColor="#b8860b"
             shimmerSize="0.05em"
-            borderRadius="8px"
+            borderRadius="12px"
             shimmerDuration="2s"
-            background="#25D366"
+            background="#0a0a0a"
             onClick={handleWhatsAppClick}
           >
             <span className="relative z-10 flex items-center gap-2 md:gap-3 justify-center">
@@ -117,46 +131,8 @@ export function Hero({ content, locale }: HeroProps) {
               {content.ctaPrimary}
             </span>
           </ShimmerButton>
-
-          <button className="px-8 py-3 md:px-12 md:py-4 border border-brass-900/30 text-brass-900 hover:bg-brass-900/10 transition-all duration-300 rounded-brand font-body font-medium text-base md:text-lg backdrop-blur-sm w-full sm:w-auto">
-            {locale === 'id' ? 'Lihat Portofolio' : 'View Portfolio'}
-          </button>
         </motion.div>
 
-        {/* Refined Trust Indicators */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <div className="text-center group">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-brass-900/10 flex items-center justify-center group-hover:bg-brass-900/20 transition-colors duration-300">
-              <div className="w-6 h-6 rounded-full bg-brass-900"></div>
-            </div>
-            <h3 className="text-cream-50 font-display text-lg mb-2">
-              {content.trustIndicators.instant}
-            </h3>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-brass-900/10 flex items-center justify-center group-hover:bg-brass-900/20 transition-colors duration-300">
-              <div className="w-6 h-6 rounded-full bg-brass-900"></div>
-            </div>
-            <h3 className="text-cream-50 font-display text-lg mb-2">
-              {content.trustIndicators.professional}
-            </h3>
-          </div>
-          
-          <div className="text-center group">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-brass-900/10 flex items-center justify-center group-hover:bg-brass-900/20 transition-colors duration-300">
-              <div className="w-6 h-6 rounded-full bg-brass-900"></div>
-            </div>
-            <h3 className="text-cream-50 font-display text-lg mb-2">
-              {content.trustIndicators.guarantee}
-            </h3>
-          </div>
-        </motion.div>
       </div>
 
       {/* Elegant bottom fade */}

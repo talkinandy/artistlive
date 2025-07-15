@@ -14,72 +14,73 @@ interface ArtistsProps {
     placeholder: {
       name: string;
       genre: string;
-      location: string;
     };
   };
 }
 
 const Artists: React.FC<ArtistsProps> = ({ content }) => {
-  // Sample artist data - in real app this would come from an API
+  // Featured Indonesian artists
   const featuredArtists = [
     {
       id: 1,
-      name: "The Jakarta Sessions",
-      genre: "Jazz & Acoustic",
-      location: "Jakarta",
-      image: "🎷",
-      verified: true,
-      gradient: "from-blue-500/20 to-purple-500/20"
+      name: "Indra Lesmana",
+      genre: "Jazz & Fusion",
+      image: "/images/artists/indralesmana.webp",
+      verified: true
     },
     {
       id: 2,
-      name: "Bali Vibes Band",
-      genre: "Reggae & Pop",
-      location: "Bali",
-      image: "🎸",
-      verified: true,
-      gradient: "from-green-500/20 to-teal-500/20"
+      name: "Lalahuta",
+      genre: "Pop & Acoustic",
+      image: "/images/artists/lalahuta.webp",
+      verified: true
     },
     {
       id: 3,
-      name: "Sarah Melody",
-      genre: "Wedding Singer",
-      location: "Surabaya",
-      image: "🎤",
-      verified: true,
-      gradient: "from-pink-500/20 to-rose-500/20"
+      name: "Titi DJ",
+      genre: "Pop & R&B",
+      image: "/images/artists/titidj.webp",
+      verified: true
     },
     {
       id: 4,
-      name: "Corporate Sounds",
-      genre: "Corporate Music",
-      location: "Jakarta",
-      image: "🎹",
-      verified: true,
-      gradient: "from-indigo-500/20 to-blue-500/20"
+      name: "Andien",
+      genre: "Jazz & Soul",
+      image: "/images/artists/andien.webp",
+      verified: true
     },
     {
       id: 5,
-      name: "Traditional Fusion",
-      genre: "Traditional & Modern",
-      location: "Yogyakarta",
-      image: "🥁",
-      verified: true,
-      gradient: "from-amber-500/20 to-orange-500/20"
+      name: "Andra & The Backbone",
+      genre: "Rock & Alternative",
+      image: "/images/artists/andrathebackbone.webp",
+      verified: true
     },
     {
       id: 6,
-      name: "Event Masters",
-      genre: "All Genres",
-      location: "Bandung",
-      image: "🎵",
-      verified: true,
-      gradient: "from-purple-500/20 to-pink-500/20"
+      name: "Balawan",
+      genre: "Jazz & World Music",
+      image: "/images/artists/balawan.webp",
+      verified: true
+    },
+    {
+      id: 7,
+      name: "Tohpati",
+      genre: "Jazz & Progressive",
+      image: "/images/artists/tohpati.webp",
+      verified: true
+    },
+    {
+      id: 8,
+      name: "Andra Ramadhan",
+      genre: "Rock & Pop",
+      image: "/images/artists/andraramadhan.webp",
+      verified: true
     }
   ];
 
   return (
-    <section className="relative bg-midnight-900 overflow-hidden">
+    <section className="relative bg-midnight-950 overflow-hidden">
       {/* Header with Background Image */}
       <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
         <img 
@@ -98,10 +99,11 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <H2 className="mb-4 text-cream-50 font-display font-normal text-4xl md:text-5xl lg:text-6xl">
+              <div className="w-16 h-px bg-gradient-to-r from-transparent via-brass-900 to-transparent mx-auto mb-8"></div>
+              <H2 className="mb-6 text-cream-50 font-display font-normal text-4xl md:text-5xl lg:text-6xl tracking-tight">
                 {content.title}
               </H2>
-              <p className="text-cream-50/80 text-xl md:text-2xl max-w-3xl mx-auto font-body font-light">
+              <p className="text-cream-50/80 text-lg md:text-xl max-w-2xl mx-auto font-body font-light leading-relaxed">
                 {content.subtitle}
               </p>
             </motion.div>
@@ -118,7 +120,7 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
         
         <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
           {/* Artists Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
           {featuredArtists.map((artist, index) => (
             <BlurFade key={artist.id} delay={0.3 + index * 0.1}>
               <MagicCard
@@ -127,18 +129,22 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
                 gradientSize={200}
                 gradientOpacity={0.08}
               >
-                <div className="p-6 md:p-8 h-full bg-cream-50/95 backdrop-blur-sm rounded-brand border border-brass-900/10 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/20 hover:shadow-2xl">
+                <div className="p-6 md:p-8 h-full bg-cream-50/98 backdrop-blur-sm rounded-brand border border-brass-900/20 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/40 hover:shadow-2xl hover:shadow-brass-900/20">
                   {/* Subtle gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-brass-900/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-brand"></div>
                   
                   <div className="relative z-10 flex items-center space-x-4">
-                    {/* Artist Avatar/Icon */}
+                    {/* Artist Avatar/Photo */}
                     <motion.div 
-                      className="w-16 h-16 bg-gradient-to-br from-brass-900/10 to-brass-900/20 rounded-brand flex items-center justify-center text-2xl shadow-lg border border-brass-900/20"
+                      className="w-16 h-16 rounded-brand overflow-hidden shadow-lg border border-brass-900/30"
                       whileHover={{ scale: 1.05 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {artist.image}
+                      <img 
+                        src={artist.image} 
+                        alt={artist.name}
+                        className="w-full h-full object-cover"
+                      />
                     </motion.div>
                     
                     {/* Artist Info */}
@@ -161,11 +167,8 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
                           </motion.span>
                         )}
                       </div>
-                      <p className="text-sm md:text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body">
+                      <p className="text-sm md:text-sm text-midnight-900/70 group-hover:text-midnight-900 transition-colors duration-300 font-body">
                         {artist.genre}
-                      </p>
-                      <p className="text-sm md:text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body">
-                        📍 {artist.location}
                       </p>
                     </div>
                   </div>
@@ -176,7 +179,7 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
                     initial={{ y: 10 }}
                     whileHover={{ y: 0 }}
                   >
-                    View Profile →
+                    Book Now →
                   </motion.div>
                 </div>
               </MagicCard>
@@ -193,9 +196,12 @@ const Artists: React.FC<ArtistsProps> = ({ content }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <p className="text-cream-50/70 font-body text-lg">
-                {content.joinText}
-              </p>
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-brass-900/20 bg-brass-900/5 backdrop-blur-sm">
+                <span className="w-2 h-2 bg-brass-900 rounded-full"></span>
+                <p className="text-cream-50/80 font-body text-base">
+                  {content.joinText}
+                </p>
+              </div>
             </motion.div>
           </BlurFade>
         </div>

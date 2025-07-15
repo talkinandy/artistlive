@@ -1,0 +1,2190 @@
+[
+  {
+    "device": "Desktop",
+    "locale": "id",
+    "url": "http://localhost:3000",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-scroll.png"
+        },
+        {
+          "scrollPosition": 441,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 441
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-scroll-scroll-441.png"
+        },
+        {
+          "scrollPosition": 882,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 882
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-scroll-scroll-882.png"
+        },
+        {
+          "scrollPosition": 1323,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 1323
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-scroll-scroll-1323.png"
+        },
+        {
+          "scrollPosition": 1764,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 1764
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-id-scroll-scroll-1764.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (141.5x42px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸English"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "metrics": {
+      "Timestamp": 22372.117451,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 530,
+      "Nodes": 748,
+      "LayoutCount": 22,
+      "RecalcStyleCount": 726,
+      "LayoutDuration": 0.043487,
+      "RecalcStyleDuration": 0.165583,
+      "ScriptDuration": 0.258748,
+      "TaskDuration": 0.864491,
+      "JSHeapUsedSize": 20345356,
+      "JSHeapTotalSize": 32178176
+    }
+  },
+  {
+    "device": "Desktop",
+    "locale": "en",
+    "url": "http://localhost:3000/en",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-scroll.png"
+        },
+        {
+          "scrollPosition": 441,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 441
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-scroll-scroll-441.png"
+        },
+        {
+          "scrollPosition": 882,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 882
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-scroll-scroll-882.png"
+        },
+        {
+          "scrollPosition": 1323,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 1323
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-scroll-scroll-1323.png"
+        },
+        {
+          "scrollPosition": 1764,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 1440,
+            "viewportHeight": 900,
+            "scrollY": 1764
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Desktop-en-scroll-scroll-1764.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (141.5x42px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸English"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "metrics": {
+      "Timestamp": 22379.150557,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 530,
+      "Nodes": 748,
+      "LayoutCount": 22,
+      "RecalcStyleCount": 694,
+      "LayoutDuration": 0.028863,
+      "RecalcStyleDuration": 0.126846,
+      "ScriptDuration": 0.214567,
+      "TaskDuration": 0.695793,
+      "JSHeapUsedSize": 20240836,
+      "JSHeapTotalSize": 31653888
+    }
+  },
+  {
+    "device": "iPhone 14 Pro",
+    "locale": "id",
+    "url": "http://localhost:3000",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-scroll.png"
+        },
+        {
+          "scrollPosition": 834,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 834
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-scroll-scroll-834.png"
+        },
+        {
+          "scrollPosition": 1668,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 1668
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-scroll-scroll-1668.png"
+        },
+        {
+          "scrollPosition": 2502,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 2502
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-scroll-scroll-2502.png"
+        },
+        {
+          "scrollPosition": 3336,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 3336
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-id-scroll-scroll-3336.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (71.046875x38px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸EN"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "relative z-10 flex items-center gap-2 md:gap-3 justify-center",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "metrics": {
+      "Timestamp": 22386.036341,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 478,
+      "Nodes": 734,
+      "LayoutCount": 22,
+      "RecalcStyleCount": 681,
+      "LayoutDuration": 0.024851,
+      "RecalcStyleDuration": 0.116052,
+      "ScriptDuration": 0.210483,
+      "TaskDuration": 0.636322,
+      "JSHeapUsedSize": 15918392,
+      "JSHeapTotalSize": 19070976
+    }
+  },
+  {
+    "device": "iPhone 14 Pro",
+    "locale": "en",
+    "url": "http://localhost:3000/en",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 390,
+        "viewportHeight": 844,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-scroll.png"
+        },
+        {
+          "scrollPosition": 834,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 834
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-scroll-scroll-834.png"
+        },
+        {
+          "scrollPosition": 1668,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 1668
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-scroll-scroll-1668.png"
+        },
+        {
+          "scrollPosition": 2502,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 2502
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-scroll-scroll-2502.png"
+        },
+        {
+          "scrollPosition": 3336,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 390,
+            "viewportHeight": 844,
+            "scrollY": 3336
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/iPhone-14-Pro-en-scroll-scroll-3336.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (71.046875x38px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸EN"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "relative z-10 flex items-center gap-2 md:gap-3 justify-center",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "metrics": {
+      "Timestamp": 22392.943323,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 513,
+      "Nodes": 734,
+      "LayoutCount": 21,
+      "RecalcStyleCount": 656,
+      "LayoutDuration": 0.021309,
+      "RecalcStyleDuration": 0.120234,
+      "ScriptDuration": 0.21633,
+      "TaskDuration": 0.646966,
+      "JSHeapUsedSize": 19247632,
+      "JSHeapTotalSize": 31391744
+    }
+  },
+  {
+    "device": "Samsung Galaxy S21",
+    "locale": "id",
+    "url": "http://localhost:3000",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 360,
+        "viewportHeight": 800,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-scroll.png"
+        },
+        {
+          "scrollPosition": 865,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 865
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-scroll-scroll-865.png"
+        },
+        {
+          "scrollPosition": 1731,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 1731
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-scroll-scroll-1731.png"
+        },
+        {
+          "scrollPosition": 2596,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 2596
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-scroll-scroll-2596.png"
+        },
+        {
+          "scrollPosition": 3462,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 3462
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-id-scroll-scroll-3462.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (71.046875x38px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸EN"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "relative z-10 flex items-center gap-2 md:gap-3 justify-center",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 360,
+        "height": 800
+      }
+    },
+    "metrics": {
+      "Timestamp": 22399.931885,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 524,
+      "Nodes": 748,
+      "LayoutCount": 22,
+      "RecalcStyleCount": 678,
+      "LayoutDuration": 0.024096,
+      "RecalcStyleDuration": 0.132511,
+      "ScriptDuration": 0.227393,
+      "TaskDuration": 0.69128,
+      "JSHeapUsedSize": 20190988,
+      "JSHeapTotalSize": 32178176
+    }
+  },
+  {
+    "device": "Samsung Galaxy S21",
+    "locale": "en",
+    "url": "http://localhost:3000/en",
+    "screenshots": {
+      "fullPage": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-fullpage.png",
+      "viewport": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-viewport.png"
+    },
+    "whatsappCTA": {
+      "initial": {
+        "whatsappElements": [],
+        "viewportWidth": 360,
+        "viewportHeight": 800,
+        "scrollY": 0
+      },
+      "scrollBehavior": [
+        {
+          "scrollPosition": 0,
+          "scrollPercentage": 0,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 0
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-scroll.png"
+        },
+        {
+          "scrollPosition": 865,
+          "scrollPercentage": 25,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 865
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-scroll-scroll-865.png"
+        },
+        {
+          "scrollPosition": 1731,
+          "scrollPercentage": 50,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 1731
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-scroll-scroll-1731.png"
+        },
+        {
+          "scrollPosition": 2596,
+          "scrollPercentage": 75,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 2596
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-scroll-scroll-2596.png"
+        },
+        {
+          "scrollPosition": 3462,
+          "scrollPercentage": 100,
+          "ctaState": {
+            "whatsappElements": [],
+            "viewportWidth": 360,
+            "viewportHeight": 800,
+            "scrollY": 3462
+          },
+          "screenshot": "/Users/Andy/Cursor/artistlive/screenshots/Samsung-Galaxy-S21-en-scroll-scroll-3462.png"
+        }
+      ]
+    },
+    "responsiveIssues": {
+      "issues": [
+        {
+          "type": "small-tap-target",
+          "description": "Element BUTTON (71.046875x38px) is smaller than recommended 44x44px",
+          "element": {
+            "tag": "BUTTON",
+            "class": "flex items-center space-x-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white transition-all duration-200 disabled:opacity-50",
+            "id": "",
+            "text": "🇺🇸EN"
+          },
+          "severity": "medium"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "text-brass-900 font-body text-sm tracking-wide",
+            "id": "",
+            "text": "Premium Live Entertainment"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Jazz & Acoustic"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Reggae & Pop"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Wedding Singer"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Surabaya"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Corporate Music"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-sm text-midnight-900/70 mb-1 group-hover:text-midnight-900 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "Traditional & Modern"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-xs text-midnight-900/60 flex items-center gap-1 group-hover:text-midnight-900/80 transition-colors duration-300 font-body",
+            "id": "",
+            "text": "📍 Yogyakarta"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 12px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "absolute bottom-4 right-4 text-xs text-brass-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body",
+            "id": "",
+            "text": "View Profile →"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "relative z-10 flex items-center gap-2 md:gap-3 justify-center",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "",
+            "id": "",
+            "text": "Book Now via WhatsApp"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "DIV",
+            "class": "flex flex-wrap justify-center gap-8 text-sm",
+            "id": "",
+            "text": "Live BookingVerified ArtistsPremium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Live Booking"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Verified Artists"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "flex items-center gap-2 text-cream-50/60",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "SPAN",
+            "class": "font-body",
+            "id": "",
+            "text": "Premium Quality"
+          },
+          "severity": "low"
+        },
+        {
+          "type": "small-text",
+          "description": "Text element has font size 14px (recommended minimum: 16px)",
+          "element": {
+            "tag": "P",
+            "class": "text-cream-50/60 font-body text-sm",
+            "id": "",
+            "text": "© 2025 ArtistLive.id. Built with ❤️ for the Indone"
+          },
+          "severity": "low"
+        }
+      ],
+      "viewport": {
+        "width": 360,
+        "height": 800
+      }
+    },
+    "metrics": {
+      "Timestamp": 22406.828123,
+      "Documents": 2,
+      "Frames": 1,
+      "JSEventListeners": 478,
+      "Nodes": 734,
+      "LayoutCount": 23,
+      "RecalcStyleCount": 671,
+      "LayoutDuration": 0.023717,
+      "RecalcStyleDuration": 0.136593,
+      "ScriptDuration": 0.228509,
+      "TaskDuration": 0.709308,
+      "JSHeapUsedSize": 15679844,
+      "JSHeapTotalSize": 19070976
+    }
+  }
+]

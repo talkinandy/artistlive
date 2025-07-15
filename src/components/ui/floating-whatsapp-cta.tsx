@@ -94,12 +94,12 @@ const FloatingWhatsAppCTA: React.FC<FloatingWhatsAppCTAProps> = ({ content, loca
             transition={{ type: "spring", stiffness: 400, damping: 20 }}
           >
             <ShimmerButton 
-              className="relative px-4 py-3 md:px-6 md:py-3 bg-whatsapp text-white font-body font-medium text-sm md:text-base rounded-brand border-0 shadow-xl hover:shadow-2xl transition-all duration-300 group min-w-[160px] md:min-w-[200px]"
-              shimmerColor="#25D366"
+              className="relative px-4 py-3 md:px-6 md:py-3 bg-midnight-950 text-brass-900 font-body font-medium text-sm md:text-base rounded-brand border border-brass-900/20 shadow-xl hover:shadow-2xl hover:bg-brass-900 hover:text-midnight-950 transition-all duration-300 group min-w-[160px] md:min-w-[200px]"
+              shimmerColor="#b8860b"
               shimmerSize="0.05em"
               borderRadius="12px"
               shimmerDuration="2s"
-              background="#25D366"
+              background="#0a0a0a"
               onClick={handleWhatsAppClick}
             >
               <span className="relative z-10 flex items-center gap-2 md:gap-3 justify-center">
@@ -119,7 +119,7 @@ const FloatingWhatsAppCTA: React.FC<FloatingWhatsAppCTAProps> = ({ content, loca
 
           {/* Subtle glow effect */}
           <motion.div
-            className="absolute inset-0 bg-whatsapp/20 rounded-brand blur-xl -z-10"
+            className="absolute inset-0 bg-brass-900/20 rounded-brand blur-xl -z-10"
             animate={{
               scale: [1, 1.1, 1],
               opacity: [0.3, 0.5, 0.3]
