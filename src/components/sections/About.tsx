@@ -47,21 +47,6 @@ interface AboutProps {
         protection: string;
       };
     };
-    why_choose: {
-      title: string;
-      efficiency: string;
-      security: string;
-      simplicity: string;
-      reliability: string;
-    };
-    stats: {
-      response_time: string;
-      response_label: string;
-      success_rate: string;
-      success_label: string;
-      time_saved: string;
-      time_saved_label: string;
-    };
   };
   heroContent: {
     ctaPrimary: string;
@@ -81,48 +66,31 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
 
   const values = [
     {
-      icon: "🚀",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
       title: content.values.innovation.title,
       description: content.values.innovation.description,
       gradient: "from-brass-900/20 to-brass-900/10"
     },
     {
-      icon: "🔒",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       title: content.values.security.title,
       description: content.values.security.description,
       gradient: "from-brass-900/15 to-brass-900/5"
     },
     {
-      icon: "✨",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       title: content.values.simplicity.title,
       description: content.values.simplicity.description,
       gradient: "from-brass-900/10 to-transparent"
     },
     {
-      icon: "⚡",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       title: content.values.reliability.title,
       description: content.values.reliability.description,
       gradient: "from-brass-900/25 to-brass-900/5"
     }
   ];
 
-  const stats = [
-    {
-      value: content.stats.response_time,
-      label: content.stats.response_label,
-      icon: "⏱️"
-    },
-    {
-      value: content.stats.success_rate,
-      label: content.stats.success_label,
-      icon: "✅"
-    },
-    {
-      value: content.stats.time_saved,
-      label: content.stats.time_saved_label,
-      icon: "💡"
-    }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -170,8 +138,12 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
                 gradientOpacity={0.06}
               >
                 <div className="p-8 md:p-10 h-full bg-cream-50/90 backdrop-blur-sm rounded-brand border border-brass-900/10 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/20 hover:shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brass-900/10 to-brass-900/20 rounded-brand flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
-                    <span className="text-2xl">🎯</span>
+                  <div className="w-16 h-16 rounded-brand overflow-hidden mb-6 group-hover:shadow-lg transition-all duration-300">
+                    <img 
+                      src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+                      alt="Our Mission" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-display font-medium text-midnight-950 mb-6 group-hover:text-brass-900 transition-colors duration-300">
                     {content.mission.title}
@@ -191,8 +163,12 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
                 gradientOpacity={0.06}
               >
                 <div className="p-8 md:p-10 h-full bg-cream-50/90 backdrop-blur-sm rounded-brand border border-brass-900/10 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/20 hover:shadow-xl">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brass-900/10 to-brass-900/20 rounded-brand flex items-center justify-center mb-6 group-hover:shadow-lg transition-all duration-300">
-                    <span className="text-2xl">🌟</span>
+                  <div className="w-16 h-16 rounded-brand overflow-hidden mb-6 group-hover:shadow-lg transition-all duration-300">
+                    <img 
+                      src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2125&q=80" 
+                      alt="Our Vision" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-display font-medium text-midnight-950 mb-6 group-hover:text-brass-900 transition-colors duration-300">
                     {content.vision.title}
@@ -247,11 +223,15 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
                 >
                   <div className="p-6 md:p-8 h-full bg-cream-50/90 backdrop-blur-sm rounded-brand border border-brass-900/10 transition-all duration-300 hover:bg-cream-50 hover:border-brass-900/20 hover:shadow-xl">
                     <motion.div 
-                      className="text-3xl mb-6 w-16 h-16 bg-gradient-to-br from-brass-900/10 to-brass-900/20 rounded-brand flex items-center justify-center shadow-sm border border-brass-900/20 group-hover:shadow-lg transition-all duration-300"
+                      className="mb-6 w-16 h-16 rounded-brand overflow-hidden shadow-sm border border-brass-900/20 group-hover:shadow-lg transition-all duration-300"
                       whileHover={{ scale: 1.05, rotate: 2 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     >
-                      {value.icon}
+                      <img 
+                        src={value.image} 
+                        alt={value.title} 
+                        className="w-full h-full object-cover"
+                      />
                     </motion.div>
                     
                     <h3 className="text-xl font-display font-medium text-midnight-950 mb-4 group-hover:text-brass-900 transition-colors duration-300">
@@ -272,26 +252,6 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-24 bg-midnight-950">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {stats.map((stat, index) => (
-              <BlurFade key={index} delay={0.3 + index * 0.1}>
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{stat.icon}</div>
-                  <div className="text-4xl md:text-5xl font-display font-normal text-brass-900 mb-2">
-                    {stat.value}
-                  </div>
-                  <p className="text-cream-50/70 font-body">
-                    {stat.label}
-                  </p>
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Services Overview */}
       <section className="py-24 bg-cream-50">
@@ -378,10 +338,10 @@ const About: React.FC<AboutProps> = ({ content, heroContent, locale }) => {
             <div className="text-center">
               <div className="max-w-2xl mx-auto mb-8">
                 <h3 className="text-2xl md:text-3xl font-display font-normal text-midnight-950 mb-4">
-                  {content.why_choose.title}
+                  Ready to Get Started?
                 </h3>
                 <p className="text-midnight-900/70 font-body text-lg leading-relaxed">
-                  {content.why_choose.efficiency}
+                  Connect with verified artists through our AI-powered WhatsApp platform
                 </p>
               </div>
               

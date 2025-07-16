@@ -163,21 +163,6 @@
         "management": "Manajemen permintaan booking yang mudah",
         "protection": "Perlindungan pembayaran yang terjamin"
       }
-    },
-    "why_choose": {
-      "title": "Mengapa Memilih Kami",
-      "efficiency": "Booking berbasis WhatsApp dengan respons AI instan",
-      "security": "Transaksi aman dan terlindungi dengan escrow",
-      "simplicity": "Mengurangi waktu administratif hingga 15 jam per booking",
-      "reliability": "Tingkat keberhasilan pembayaran 99.8%"
-    },
-    "stats": {
-      "response_time": "< 3 menit",
-      "response_label": "Rata-rata waktu respons proposal",
-      "success_rate": "99.8%",
-      "success_label": "Tingkat keberhasilan pembayaran",
-      "time_saved": "15 jam",
-      "time_saved_label": "Waktu admin yang dihemat per booking"
     }
   }
 } 

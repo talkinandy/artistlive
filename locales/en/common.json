@@ -163,21 +163,6 @@
         "management": "Easy booking request management",
         "protection": "Guaranteed payment protection"
       }
-    },
-    "why_choose": {
-      "title": "Why Choose Us",
-      "efficiency": "WhatsApp-based booking with instant AI responses",
-      "security": "Safe and protected transactions with escrow",
-      "simplicity": "Reduce administrative time by up to 15 hours per booking",
-      "reliability": "99.8% successful payout rate"
-    },
-    "stats": {
-      "response_time": "< 3 min",
-      "response_label": "Average rate proposal time",
-      "success_rate": "99.8%",
-      "success_label": "Successful payout rate",
-      "time_saved": "15 hours",
-      "time_saved_label": "Admin time saved per booking"
     }
   }
 } 
