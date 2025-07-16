@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import { Hero } from '@/components/sections/Hero';
 import Artists from '@/components/sections/Artists';
-import Services from '@/components/sections/Services';
+import WhyUse from '@/components/sections/WhyUse';
 import { PremiumFooter } from '@/components/ui';
 import FloatingWhatsAppCTA from '@/components/ui/floating-whatsapp-cta';
 
@@ -50,8 +50,8 @@ export default async function HomePage({ params }: Props) {
         <Artists content={t.artists} />
       </section>
 
-      {/* Service Categories */}
-      <Services content={t.services} />
+      {/* Why Use ArtistLive */}
+      <WhyUse content={t.whyUse} />
 
       {/* Smart WhatsApp CTA - appears when hero CTA is out of view */}
       <FloatingWhatsAppCTA content={t.hero} locale={locale} />

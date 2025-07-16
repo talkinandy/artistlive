@@ -1,7 +1,7 @@
 {
   "navigation": {
     "home": "Home",
-    "services": "Services",
+    "services": "Why ArtistLive",
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact",
@@ -32,24 +32,28 @@
       "genre": "Genre"
     }
   },
-  "services": {
-    "title": "Our Services",
-    "subtitle": "Find the best musicians for every type of event",
-    "wedding": {
-      "title": "Wedding Bands",
-      "description": "Hire bands for wedding ceremonies and receptions with romantic song repertoires"
+  "whyUse": {
+    "title": "Why Use ArtistLive?",
+    "subtitle": "Transform your artist booking experience from chaos to clarity with Indonesia's first AI-powered WhatsApp booking platform",
+    "verified": {
+      "title": "Verified Direct Access",
+      "problem": "Event organizers waste hours finding legitimate artist contacts through Instagram DMs and intermediary brokers",
+      "solution": "AI-powered WhatsApp platform provides instant access to verified artist representatives 24/7"
     },
-    "corporate": {
-      "title": "Corporate Event Music",
-      "description": "Professional live music for corporate events and company gatherings"
+    "transparent": {
+      "title": "Transparent Pricing",
+      "problem": "Artist fees are only revealed after days of discussion, often exceeding entire budgets",
+      "solution": "Get instant fee quotes through WhatsApp bot, including all standard costs upfront"
     },
-    "school": {
-      "title": "School & Campus Events",
-      "description": "High-energy bands for school events, graduations, and campus celebrations"
+    "smart": {
+      "title": "Smart Rider Management",
+      "problem": "Artists send lengthy technical riders that organizers struggle to understand and fulfill",
+      "solution": "AI agent translates complex rider requirements into clear, actionable checklists"
     },
-    "solo": {
-      "title": "Solo Singers",
-      "description": "Book professional solo singers for intimate and private events"
+    "automated": {
+      "title": "Automated Contract Flow",
+      "problem": "Contract negotiations, revisions, and signatures can take weeks to complete",
+      "solution": "Platform streamlines entire contract process with intelligent automation and escrow system"
     }
   },
   "features": {

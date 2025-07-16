@@ -9,6 +9,7 @@ interface NavigationProps {
   translations: {
     navigation: {
       home: string;
+      services: string;
       about: string;
     };
   };
@@ -22,6 +23,11 @@ const Navigation: React.FC<NavigationProps> = ({ locale, translations }) => {
       href: `/${locale}`,
       label: translations.navigation.home,
       isActive: pathname === `/${locale}`
+    },
+    {
+      href: `/${locale}#why-use`,
+      label: translations.navigation.services,
+      isActive: false
     },
     {
       href: `/${locale}/about`,

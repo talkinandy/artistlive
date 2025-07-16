@@ -1,7 +1,7 @@
 {
   "navigation": {
     "home": "Beranda",
-    "services": "Layanan",
+    "services": "Kenapa ArtistLive",
     "portfolio": "Portofolio",
     "about": "Tentang",
     "contact": "Kontak",
@@ -32,24 +32,28 @@
       "genre": "Genre"
     }
   },
-  "services": {
-    "title": "Layanan Kami",
-    "subtitle": "Temukan musisi terbaik untuk setiap jenis acara",
-    "wedding": {
-      "title": "Band Pernikahan",
-      "description": "Sewa band untuk acara pernikahan dan resepsi dengan repertoir lagu romantis"
+  "whyUse": {
+    "title": "Kenapa Pakai ArtistLive?",
+    "subtitle": "Book Artis & Penyanyi Terkenal tanpa ribet via WhatsApp dengan AI pertama di Indonesia",
+    "verified": {
+      "title": "Akses Langsung Terverifikasi",
+      "problem": "Organizer buang waktu berjam-jam cari kontak artis lewat DM Instagram dan broker perantara",
+      "solution": "Platform WhatsApp bertenaga AI memberikan akses instan ke perwakilan artis terverifikasi 24/7"
     },
-    "corporate": {
-      "title": "Musik Acara Kantor",
-      "description": "Live music profesional untuk corporate event dan gathering perusahaan"
+    "transparent": {
+      "title": "Harga Transparan",
+      "problem": "Biaya artis baru ketahuan setelah diskusi berhari-hari, sering melebihi budget",
+      "solution": "Dapatkan quote fee instan lewat WhatsApp, termasuk semua biaya standar di depan"
     },
-    "school": {
-      "title": "Band Pensi & Sekolah",
-      "description": "Band untuk acara sekolah, pensi, dan event kampus dengan energi tinggi"
+    "smart": {
+      "title": "Manajemen Rider Pintar",
+      "problem": "Artis kirim spesifikasi rider teknis panjang yang sulit dipahami dan dipenuhi organizer",
+      "solution": "AI agent terjemahkan kebutuhan rider kompleks jadi checklist yang jelas dan terstruktur"
     },
-    "solo": {
-      "title": "Penyanyi Solo",
-      "description": "Booking penyanyi solo profesional untuk acara intimate dan private event"
+    "automated": {
+      "title": "Kontrak Otomatis",
+      "problem": "Negosiasi kontrak, revisi, dan tanda tangan bisa memakan waktu berminggu-minggu",
+      "solution": "ArtistLive mempermudah seluruh proses kontrak dengan automasi cerdas dan sistem escrow"
     }
   },
   "features": {
