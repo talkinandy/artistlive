@@ -5,7 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ```bash
-# Start development server, but make sure it hasn't already run in the background from other terminal if claude want to run this.
+# Start development server
+# IMPORTANT: Do not run with & (background) as it will cause infinite output loops
+# Check if already running with: ps aux | grep "npm run dev" | grep -v grep
 npm run dev
 
 # Build for production
@@ -62,7 +64,7 @@ src/
   Accent	Warm Brass	#b8860b	Highlights, hover states, premium accents. Evokes jazz instruments.
   Support	Deep Charcoal	#2a2a2a	Secondary backgrounds, subtle contrasts.
   Trust/CTA	WhatsApp Green	#25D366	Primary booking CTA only.
-- **Typography**: Poppins (display/headings), Inter (body text)
+- **Typography**: Playfair Display (display/headings), Lato (body text)
 - **Component Patterns**: 12px border radius, subtle animations ≤150ms
 - **Brand Voice**: Premium, professional, Indonesian-focused
 - **WhatsApp CTA**: Primary conversion action (#25D366)

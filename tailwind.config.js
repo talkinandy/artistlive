@@ -124,19 +124,23 @@ module.exports = {
       },
       fontFamily: {
         // Premium Brand Identity Typography
-        sans: ["var(--font-inter)", "Inter", "sans-serif"], // Body copy
+        sans: ["var(--font-lato)", "Lato", "sans-serif"], // Body copy
         serif: ["var(--font-playfair)", "Playfair Display", "serif"], // Premium headlines
         display: ["var(--font-playfair)", "Playfair Display", "serif"], // Display/headings
-        body: ["var(--font-inter)", "Inter", "sans-serif"], // Body text
+        body: ["var(--font-lato)", "Lato", "sans-serif"], // Body text
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
       },
       fontWeight: {
-        // Poppins weights (600-700 for display)
-        'display': '600',
+        // Playfair Display weights (400-700 for display)
+        'display': '400',
+        'display-medium': '500',
+        'display-semibold': '600',
         'display-bold': '700',
-        // Inter weights (400-500 for body)
+        // Lato weights (300-900 for body)
+        'body-light': '300',
         'body': '400',
-        'body-medium': '500',
+        'body-bold': '700',
+        'body-black': '900',
       },
       animation: {
         // Brand Identity: Subtle fade-up ≤ 150ms

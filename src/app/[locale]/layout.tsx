@@ -1,11 +1,12 @@
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Lato, Playfair_Display } from 'next/font/google';
 import { Metadata } from 'next';
 import '@/styles/globals.css';
 
 // Brand Identity Typography
-const inter = Inter({ 
+const lato = Lato({ 
+  weight: ['300', '400', '700', '900'],
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-lato',
   display: 'swap',
 });
 
@@ -142,7 +143,7 @@ export default async function LocaleLayout({
         <link rel="alternate" hrefLang="en-US" href="https://artistlive.id/en" />
         <link rel="alternate" hrefLang="x-default" href="https://artistlive.id/" />
       </head>
-      <body className={`${inter.variable} ${playfairDisplay.variable} font-sans`}>
+      <body className={`${lato.variable} ${playfairDisplay.variable} font-sans`}>
         <div id="root">
           {children}
         </div>
